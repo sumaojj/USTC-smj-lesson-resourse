@@ -1,0 +1,4206 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\begin_preamble
+% 解决pdflatex不支持插入eps图片问题
+\usepackage{epstopdf}
+\end_preamble
+\options UTF8
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+eqs-within-sections
+theorems-named
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize b4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+实分析期末复习
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Lec 11
+\end_layout
+
+\begin_layout Theorem
+（Levi MCT）设E为可测集，if 
+\begin_inset Formula $0\leq f_{k}\uparrow f$
+\end_inset
+
+ a.e 则 
+\begin_inset Formula 
+\[
+\underset{k\rightarrow\infty}{lim}\int_{E}f_{k}dm=\int_{E}fdm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+不妨设
+\begin_inset Formula $E=\mathbb{R}^{n}$
+\end_inset
+
+，设
+\begin_inset Formula $f_{k}$
+\end_inset
+
+逐点单调收敛于
+\begin_inset Formula $f$
+\end_inset
+
+则考虑
+\begin_inset Formula $\infty$
+\end_inset
+
+的情况下
+\begin_inset Formula $\underset{k\rightarrow\infty}{lim}\int_{E}f_{k}dm$
+\end_inset
+
+存在
+\end_layout
+
+\begin_layout Proof
+Case1.
+\begin_inset Formula $\underset{k\rightarrow\infty}{lim}\int_{E}f_{k}dm=+\infty$
+\end_inset
+
+，则平凡
+\end_layout
+
+\begin_layout Proof
+Case1.
+\begin_inset Formula $\underset{k\rightarrow\infty}{lim}\int_{E}f_{k}dm<+\infty$
+\end_inset
+
+，则一方面
+\begin_inset Formula $\forall k,f_{k}<f$
+\end_inset
+
+，则
+\begin_inset Formula $\underset{k\rightarrow\infty}{lim}\int_{E}f_{k}dm\leq\int_{E}fdm$
+\end_inset
+
+，另一方面任意simple 
+\begin_inset Formula $\varphi$
+\end_inset
+
+，
+\begin_inset Formula $0\leq\varphi\leq f$
+\end_inset
+
+，对任意
+\begin_inset Formula $0<\alpha<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+E_{k}=\left\{ f_{k}\geq\alpha\varphi\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+则
+\begin_inset Formula $E_{k}\uparrow\mathbb{R}^{n}$
+\end_inset
+
+，令
+\begin_inset Formula 
+\[
+\varphi=\stackrel[j=1]{N}{\sum}a_{j}X_{F_{j}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+则有
+\begin_inset Formula $k\rightarrow\infty$
+\end_inset
+
+时
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\int_{E_{k}}\varphi dm\rightarrow\int_{E}\varphi dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+则
+\begin_inset Formula 
+\[
+\int_{E}f_{k}dm\geq\int_{E_{k}}f_{k}dm\geq\alpha\int_{E_{k}}\varphi dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+则
+\begin_inset Formula 
+\[
+\underset{k\rightarrow\infty}{lim}\int_{E}f_{k}dm\geq\int_{E}fdm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是
+\begin_inset Formula 
+\[
+\underset{k\rightarrow\infty}{lim}\int_{E}f_{k}dm=\int_{E}fdm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+（Fatou引理）
+\end_layout
+
+\begin_layout Theorem
+设
+\begin_inset Formula $f_{k}\geq0$
+\end_inset
+
+，在
+\begin_inset Formula $E$
+\end_inset
+
+上可测，则
+\begin_inset Formula 
+\[
+\int_{E}\underset{k\rightarrow\infty}{lim}inff_{k}dm\leq\underset{k\rightarrow\infty}{lim}inf\int_{E}f_{k}dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+我们用MCT去证
+\end_layout
+
+\begin_layout Proof
+对任意
+\begin_inset Formula $k$
+\end_inset
+
+，任意
+\begin_inset Formula $j\geq k$
+\end_inset
+
+，有
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\underset{j\geq k}{inf}f_{k}\leq f_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是任意
+\begin_inset Formula $j\geq k$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int_{E}\underset{j\geq k}{inf}f_{k}dm\leq\int_{E}f_{j}dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+从而
+\begin_inset Formula 
+\[
+\int_{E}\underset{j\geq k}{inf}f_{k}dm\leq\underset{j\geq k}{inf}\int_{E}f_{j}dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+另一方面，由
+\begin_inset Formula $MCT$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\int_{E}\underset{k\rightarrow\infty}{lim}inff_{k}dm\overset{MCT}{=}\underset{k\rightarrow\infty}{lim}\int_{E}inff_{k}dm\leq\underset{k\rightarrow\infty}{lim}inf\int_{E}f_{k}dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+用Fatou引理证明MCT
+\end_layout
+
+\begin_layout Proof
+一方面
+\begin_inset Formula $\forall k,f_{k}<f$
+\end_inset
+
+，则
+\begin_inset Formula $\underset{k\rightarrow\infty}{lim}sup\int_{E}f_{k}dm\leq\int_{E}fdm$
+\end_inset
+
+，另一方面由Fatou引理
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\int_{E}fdm\leq\underset{k\rightarrow\infty}{lim}inf\int_{E}f_{k}dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是
+\begin_inset Formula 
+\[
+\underset{k\rightarrow\infty}{lim}sup\int_{E}f_{k}dm=\int_{E}fdm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Conclusion
+（正线性）if 
+\begin_inset Formula $f,g\geq0$
+\end_inset
+
+ 可测，
+\begin_inset Formula $\alpha,\beta\geq0$
+\end_inset
+
+，则
+\begin_inset Formula 
+\[
+\int\left(\alpha f+\beta g\right)dm=\alpha\int fdm+\beta\int gdm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+取simple 
+\begin_inset Formula $\varphi_{k}\uparrow f$
+\end_inset
+
+，则由MCT引理即证
+\end_layout
+
+\begin_layout Conclusion
+（逐项积分）设
+\begin_inset Formula $f_{k}\geq0$
+\end_inset
+
+，可测，
+\begin_inset Formula $f=\stackrel[k=1]{\infty}{\sum}f_{k}$
+\end_inset
+
+，则
+\begin_inset Formula 
+\[
+\int fdm=\stackrel[k=1]{\infty}{\sum}\int f_{k}dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\text{令}F_{n}=\stackrel[k=1]{n}{\sum}f_{k}$
+\end_inset
+
+，则
+\begin_inset Formula $F_{n}\uparrow f$
+\end_inset
+
+，由MCT
+\begin_inset Formula 
+\[
+\int fdm\overset{MCT}{=}\underset{n\rightarrow\infty}{lim}\stackrel[k=1]{n}{\sum}\int f_{k}dm\overset{\text{正线性}}{=}\stackrel[k=1]{\infty}{\sum}\int f_{k}dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+设E可测，如果
+\begin_inset Formula $f$
+\end_inset
+
+在E上可测，且
+\begin_inset Formula $\int_{E}f^{+}dm$
+\end_inset
+
+与
+\begin_inset Formula $\int_{E}f^{-}dm$
+\end_inset
+
+存在，那么称
+\begin_inset Formula $f$
+\end_inset
+
+在E上可积，且
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\int_{E}fdm=\int_{E}f^{+}dm-\int_{E}f^{-}dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+且
+\begin_inset Formula $L^{1}\left(E\right)\overset{def}{=}$
+\end_inset
+
+在E上可积的函数全体，
+\begin_inset Formula $L^{1}\overset{def}{=}L^{1}\left(\mathbb{R}^{n}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Conclusion
+若
+\begin_inset Formula $f\in L^{1}\left(E\right)$
+\end_inset
+
+，则
+\begin_inset Formula $f$
+\end_inset
+
+在E上 a.e 有限（由定义）
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+略
+\end_layout
+
+\begin_layout Conclusion
+\begin_inset Formula $f\in L^{1}\left(E\right)\Longleftrightarrow\left|f\right|\in L^{1}\left(E\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+：平凡，因为
+\begin_inset Formula $\int_{E}\left|f\right|dm=\int_{E}f^{+}dm+\int_{E}f^{-}dm$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Leftarrow$
+\end_inset
+
+：
+\begin_inset Formula $max\left\{ f^{+},f^{-}\right\} \leq\left|f\right|$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+max\left\{ \int_{E}f^{+}dm,\int_{E}f^{+}dm\right\} \leq\int_{E}\left|f\right|dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Conclusion
+\begin_inset Formula $L^{1}\left(E\right)$
+\end_inset
+
+是向量空间
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\left|\alpha f+\beta g\right|\leq\left|\alpha\right|\left|f\right|+\left|\beta\right|\left|g\right|$
+\end_inset
+
+,于是
+\begin_inset Formula 
+\[
+\int\left|\alpha f+\beta g\right|dm\leq\left|\alpha\right|\int\left|f\right|dm+\left|\beta\right|\int\left|g\right|dm<+\infty
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+再由结论4即证
+\end_layout
+
+\begin_deeper
+\begin_layout Conclusion
+（线性）
+\begin_inset Formula $f,g\in L^{1}\left(E\right)$
+\end_inset
+
+则
+\begin_inset Formula 
+\[
+\int\left(\alpha f+\beta g\right)dm=\alpha\int fdm+\beta\int gdm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+由正线性，拆开积分即证
+\end_layout
+
+\begin_layout Conclusion
+(可数可加性)，设
+\begin_inset Formula $f\in L^{1}\left(E\right)$
+\end_inset
+
+，
+\begin_inset Formula $E_{k}$
+\end_inset
+
+可测且相互不交，则
+\end_layout
+
+\begin_layout Conclusion
+\begin_inset Formula 
+\[
+\int_{\stackrel[k=1]{\infty}{∪}E_{k}}fdm=\stackrel[k=1]{\infty}{\sum}\int_{E_{k}}fdm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+考虑正部，任意N,有
+\begin_inset Formula $\int_{\stackrel[k=1]{N}{∪}E_{k}}f^{+}dm=\int f^{+}\cdot X_{\stackrel[k=1]{N}{∪}E_{k}}dm=\stackrel[k=1]{N}{\sum}\int_{E_{k}}fdm$
+\end_inset
+
+,则由于MCT
+\begin_inset Formula 
+\[
+\int f^{+}\cdot X_{\stackrel[k=1]{\infty}{∪}E_{k}}dm=\stackrel[k=1]{\infty}{\sum}\int_{E_{k}}f^{+}dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是
+\begin_inset Formula 
+\[
+\int_{\stackrel[k=1]{\infty}{∪}E_{k}}f^{+}dm=\stackrel[k=1]{\infty}{\sum}\int_{E_{k}}f^{+}dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Conclusion
+（单调性）
+\begin_inset Formula $f,g\in L^{1}\left(E\right)$
+\end_inset
+
+，且
+\begin_inset Formula $f\leq g$
+\end_inset
+
+则
+\begin_inset Formula 
+\[
+\int fdm\leq\int gdm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $0\leq\int\left(g-f\right)dm<+\infty$
+\end_inset
+
+，
+\end_layout
+
+\begin_layout Conclusion
+（三角不等式）设
+\begin_inset Formula $f\in L^{1}\left(E\right)$
+\end_inset
+
+，则
+\begin_inset Formula 
+\[
+\left|\int fdm\right|\leq\int\left|f\right|dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\left|\int fdm\right|=\left|\int f^{+}dm-\int f^{+}dm\right|\leq f^{+}dm+f^{-}dm=\int\left|f\right|dm$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+设
+\begin_inset Formula $f\in L^{1}\left(E\right)$
+\end_inset
+
+，则任意
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+,存在
+\begin_inset Formula $B\in\mathbb{R}^{n}$
+\end_inset
+
+,使得
+\begin_inset Formula $m\left(B\right)<+\infty$
+\end_inset
+
+,且
+\begin_inset Formula 
+\[
+\int_{\mathbb{R}^{n}/B}\left|f\right|dm<\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+令
+\begin_inset Formula 
+\[
+f_{k}\overset{def}{=}\left|f\right|\cdot X_{B\left(0,k\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是
+\begin_inset Formula $f_{k}\uparrow\left|f\right|$
+\end_inset
+
+，则
+\begin_inset Formula 
+\[
+\underset{k\rightarrow\infty}{lim}\int_{E}f_{k}dm=\int_{E}\left|f\right|dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是任意
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+,存在
+\begin_inset Formula $N$
+\end_inset
+
+,使得
+\begin_inset Formula $\text{任\text{意k>N}}$
+\end_inset
+
+,有
+\begin_inset Formula 
+\[
+\left|\int_{E}f_{k}dm-\int_{E}\left|f\right|dm\right|<\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+而
+\begin_inset Formula 
+\[
+\left|\int_{E}f_{k}dm-\int_{E}\left|f\right|dm\right|=\int_{\mathbb{R}^{n}/B\left(0,k\right)}\left|f\right|dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Lec 12
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+（积分得绝对收敛性）设
+\begin_inset Formula $f\in L^{1}\left(E\right)$
+\end_inset
+
+，则任意
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+,存在
+\begin_inset Formula $\delta>0$
+\end_inset
+
+,使得任意E，
+\begin_inset Formula $m\left(E\right)<+\infty$
+\end_inset
+
+,有
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\int_{E}\left|f\right|dm<\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+任意k，
+\begin_inset Formula 
+\[
+E_{k}\overset{def}{=}\left\{ \left|f\right|\leq k\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+定义
+\begin_inset Formula 
+\[
+f_{k}\overset{def}{=}f\cdot X_{E_{k}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+则
+\begin_inset Formula $f_{k}\uparrow\left|f\right|$
+\end_inset
+
+，于是由MCT
+\begin_inset Formula 
+\[
+\underset{k\rightarrow\infty}{lim}\int f_{k}dm=\int\left|f\right|dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+即任意
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+,存在
+\begin_inset Formula $N$
+\end_inset
+
+,使得
+\begin_inset Formula $\text{任\text{意}}k\geq N$
+\end_inset
+
+,有
+\begin_inset Formula 
+\[
+\left|\int f_{k}dm-\int\left|f\right|dm\right|<\frac{\varepsilon}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+对于任意E，
+\begin_inset Formula $m\left(E\right)<+\infty$
+\end_inset
+
+,令
+\begin_inset Formula $\delta=\frac{\varepsilon}{2N}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int_{E}\left|f\right|dm=\int_{E}\left(\left|f\right|-f_{N}\right)dm+\int_{E}f_{N}dm<\frac{\varepsilon}{2}+Nm\left(E\right)\leq\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+（DCT）控制收敛定理
+\end_layout
+
+\begin_layout Theorem
+设
+\begin_inset Formula $f_{k}\rightarrow f$
+\end_inset
+
+ a.e且存在
+\begin_inset Formula $g\in L^{1}\left(E\right)$
+\end_inset
+
+，使得
+\begin_inset Formula $\left|f_{k}\right|\leq g$
+\end_inset
+
+,a.e 即存在可积控制收敛函数，则
+\begin_inset Formula 
+\[
+\underset{k\rightarrow\infty}{lim}\int f_{k}dm=\int fdm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+由
+\begin_inset Formula $\left|f_{k}\right|\leq g$
+\end_inset
+
+,a.e 和
+\begin_inset Formula $f_{k}\rightarrow f$
+\end_inset
+
+ a.e 知
+\begin_inset Formula $\left|f\right|\leq g$
+\end_inset
+
+,a.e 从而
+\begin_inset Formula $f\in L^{1}\left(E\right)$
+\end_inset
+
+，令
+\begin_inset Formula 
+\[
+g_{k}=\left|f_{k}-f\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+则
+\begin_inset Formula $0\leq g_{k}\leq2g$
+\end_inset
+
+ a.e ，则由Fatou引理
+\begin_inset Formula 
+\[
+\int\underset{k\rightarrow\infty}{lim}inf\left(2g-g_{k}\right)dm\leq\underset{k\rightarrow\infty}{lim}inf\int\left(2g-g_{k}\right)dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+得到
+\begin_inset Formula 
+\[
+\underset{k\rightarrow\infty}{lim}sup\int g_{k}dm\leq\int_{E}\underset{k\rightarrow\infty}{lim}g_{k}dm=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+即
+\begin_inset Formula 
+\[
+\underset{k\rightarrow\infty}{lim}\int\left|f_{k}-f\right|dm=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+（有界收敛定理）设
+\begin_inset Formula $f_{k}$
+\end_inset
+
+可测，且使得
+\end_layout
+
+\begin_layout Theorem
+1.存在常数M，使得
+\begin_inset Formula $\left|f_{k}\right|\leq M$
+\end_inset
+
+ a.e
+\end_layout
+
+\begin_layout Theorem
+2.存在E，
+\begin_inset Formula $m\left(E\right)<\infty$
+\end_inset
+
+,使得
+\begin_inset Formula $\text{supp\left(f_{k}\right)}\subset E$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+3.
+\begin_inset Formula $f_{k}\rightarrow f$
+\end_inset
+
+ a.e 
+\end_layout
+
+\begin_layout Theorem
+则
+\begin_inset Formula 
+\[
+\underset{k\rightarrow\infty}{lim}\int f_{k}dm=\int fdm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+取
+\begin_inset Formula $g=M\cdot X_{E}$
+\end_inset
+
+，由DCT即证
+\end_layout
+
+\begin_layout Theorem
+（积分号下求导）设
+\begin_inset Formula $E\subset\mathbb{R}^{n}$
+\end_inset
+
+可测，函数
+\begin_inset Formula $f:E\times\left(a,b\right)\rightarrow R$
+\end_inset
+
+,且
+\end_layout
+
+\begin_layout Theorem
+1.任意
+\begin_inset Formula $y\in\left(a,b\right)$
+\end_inset
+
+,
+\begin_inset Formula $x\rightarrow f\left(x,y\right)$
+\end_inset
+
+在E上可积
+\end_layout
+
+\begin_layout Theorem
+2.任意
+\begin_inset Formula $x\in E$
+\end_inset
+
+，
+\begin_inset Formula $y\rightarrow f\left(x,y\right)$
+\end_inset
+
+在
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+上可微
+\end_layout
+
+\begin_layout Theorem
+3.存在
+\begin_inset Formula $g\in L^{1}\left(E\right)$
+\end_inset
+
+，且任意的
+\begin_inset Formula $\left(x,y\right)\in E\times\left(a,b\right)$
+\end_inset
+
+，有
+\begin_inset Formula 
+\[
+\left|\frac{\partial f}{\partial y}\left(x,y\right)\right|\leq g\left(x\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+则
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial y}\int_{E}f\left(x,y\right)dm=\int_{E}\frac{\partial}{\partial y}f\left(x,y\right)dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+对任意的
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+,
+\begin_inset Formula $t_{k}\rightarrow0$
+\end_inset
+
+,且
+\begin_inset Formula $y+t_{k}\in\left(a,b\right)$
+\end_inset
+
+，定义
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+f_{k}=\frac{f\left(x,y+t_{k}\right)-f\left(x,y\right)}{t_{k}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+则
+\begin_inset Formula $f_{k}\rightarrow\frac{\partial f}{\partial y}\left(x,y\right)$
+\end_inset
+
+，且
+\begin_inset Formula 
+\[
+\left|f_{k}\right|\overset{\text{中\text{值\text{定\text{理}}}}}{\leq}sup\left|\frac{\partial f}{\partial y}\left(x,y\right)\right|\leq g\left(x\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是由DCT，
+\begin_inset Formula 
+\[
+\underset{k\rightarrow\infty}{lim}\int_{E}\frac{f\left(x,y+t_{k}\right)-f\left(x,y\right)}{t_{k}}dm=\int_{E}\frac{\partial f}{\partial y}\left(x,y\right)dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+另一方面
+\begin_inset Formula 
+\[
+\underset{k\rightarrow\infty}{lim}\int_{E}\frac{f\left(x,y+t_{k}\right)-f\left(x,y\right)}{t_{k}}dm=\underset{k\rightarrow\infty}{lim}\frac{\int_{E}f\left(x,y+t_{k}\right)dm-\int_{E}f\left(x,y\right)dm}{t_{k}}=\frac{\partial}{\partial y}\int_{E}f\left(x,y\right)dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial y}\int_{E}f\left(x,y\right)dm=\int_{E}\frac{\partial}{\partial y}f\left(x,y\right)dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+（复值函数的积分）如果函数
+\begin_inset Formula $f:E\rightarrow\mathbb{C}$
+\end_inset
+
+,则定义
+\begin_inset Formula 
+\[
+f\text{可\text{测}}\overset{def}{=}Ref\text{可\text{测且}}Imf\text{可\text{测}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+且
+\begin_inset Formula 
+\[
+\int_{E}fdm=\int_{E}Refdm+i\int_{E}Imfdm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Riemann积分可推出Lebesgue可积
+\end_layout
+
+\begin_layout Proof
+略，详 见各大实分析教材
+\end_layout
+
+\begin_layout Conclusion
+函数
+\begin_inset Formula $f\text{：}\mathbb{R}^{n}\rightarrow\mathbb{R}$
+\end_inset
+
+连续，则
+\end_layout
+
+\begin_layout Conclusion
+\begin_inset Formula 
+\[
+f:\text{零\text{测}}\rightarrow\text{零测}\Longleftrightarrow f:\text{可测}\rightarrow\text{可测}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+若
+\begin_inset Formula $f:\text{零\text{测}}\rightarrow\text{零测}$
+\end_inset
+
+，E可测，
+\begin_inset Formula $E=F∪N$
+\end_inset
+
+，
+\begin_inset Formula $F\in F_{\sigma}$
+\end_inset
+
+,N为零测集。那么
+\begin_inset Formula 
+\[
+E=\stackrel[i=1]{\infty}{∪}F_{i}∪N=\stackrel[i=1]{\infty}{∪}\stackrel[k=1]{\infty}{∪}\left(\overline{B\left(0,k\right)}∪F_{i}\right)∪N
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+由于
+\begin_inset Formula $f$
+\end_inset
+
+连续，故把紧集映到紧集。于是
+\begin_inset Formula 
+\[
+f\left(E\right)=\stackrel[i=1]{\infty}{∪}\stackrel[k=1]{\infty}{∪}f\left(\overline{B\left(0,k\right)}∪F_{i}\right)∪f\left(N\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+若
+\begin_inset Formula $f:\text{可测}\rightarrow\text{可测}$
+\end_inset
+
+，设N零测，反证法，若
+\begin_inset Formula $f\left(N\right)$
+\end_inset
+
+不为零测，则存在
+\begin_inset Formula $E\subset f\left(N\right)$
+\end_inset
+
+不可测，则
+\begin_inset Formula $f\left(f^{-1}\left(E\right)\right)=E$
+\end_inset
+
+，不可测，矛盾！
+\end_layout
+
+\begin_layout Section
+Lec 13
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L^{p}\text{空\text{间}}$
+\end_inset
+
+,祖师爷
+\begin_inset Formula $F.Riesz$
+\end_inset
+
+和
+\begin_inset Formula $Fr\acute{e}chet$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+设
+\begin_inset Formula $0<p<\infty$
+\end_inset
+
+,
+\begin_inset Formula $E\subset\mathbb{R}^{n}$
+\end_inset
+
+可测，
+\begin_inset Formula $f$
+\end_inset
+
+在E上可测，定义范数（后面会证明）
+\begin_inset Formula 
+\[
+\left\Vert f\right\Vert _{p}\overset{def}{=}\left(\int_{E}\left|f\right|^{p}dm\right)^{\frac{1}{p}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+于是有特殊赋范空间，即定义
+\begin_inset Formula $L^{p}\text{空\text{间}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+L^{p}\left(E\right)\overset{def}{=}\left\{ f:\left\Vert f\right\Vert _{p}<\infty\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+如果存在
+\begin_inset Formula $M\geq0$
+\end_inset
+
+，使得
+\begin_inset Formula $\left|f\right|\leq M$
+\end_inset
+
+，a.e on E，则称
+\begin_inset Formula $f$
+\end_inset
+
+在E上有本性上确界，M称为
+\begin_inset Formula $\left|f\right|$
+\end_inset
+
+的本性上界。定义
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\left\Vert f\right\Vert _{p}\overset{def}{=}\underset{x\in E}{esssup}\left|f\right|\overset{def}{=}inf\left\{ M>0:\left|f\right|\leq M\text{在E上}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+于是
+\begin_inset Formula 
+\[
+L^{\infty}\left(E\right)\overset{def}{=}E\text{上有本性上确界全体}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $L^{p}\text{是向量空\text{间}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $p=\infty$
+\end_inset
+
+时平凡，设
+\begin_inset Formula $f,g\in L^{p}\left(E\right)$
+\end_inset
+
+,
+\begin_inset Formula $0<p<\infty$
+\end_inset
+
+,则
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left|f+g\right|^{p}\leq\left(2max\left\{ f,g\right\} \right)^{p}\leq2^{p}\left(\left|f\right|^{p}+\left|g\right|^{p}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是
+\begin_inset Formula 
+\[
+\int_{E}\left|f+g\right|^{p}dm\leq2^{p}\left[\int_{E}\left|f\right|^{p}dm+\int_{E}\left|g\right|^{p}dm\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+当
+\begin_inset Formula $0<p<1$
+\end_inset
+
+时，
+\begin_inset Formula $\left\Vert \cdot\right\Vert _{p}$
+\end_inset
+
+不是
+\begin_inset Formula $L^{p}\left(E\right)$
+\end_inset
+
+上范数
+\end_layout
+
+\begin_layout Proof
+取
+\begin_inset Formula $E_{1},E_{2}\subset E$
+\end_inset
+
+可测，
+\begin_inset Formula $E_{1}\cap E_{2}=\emptyset$
+\end_inset
+
+且
+\begin_inset Formula $0<m\left(E_{1}\right),m\left(E_{2}\right)<\infty$
+\end_inset
+
+,则
+\begin_inset Formula 
+\[
+\left\Vert X_{E_{1}}+X_{E_{2}}\right\Vert _{p}=\left(m\left(E_{1}\right)+m\left(E_{2}\right)\right)^{\frac{1}{p}}>m\left(E_{1}\right)^{\frac{1}{p}}+m\left(E_{1}\right)^{\frac{1}{p}}=\left\Vert X_{E_{1}}\right\Vert _{p}+\left\Vert X_{E_{2}}\right\Vert _{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+下面我们要证明当
+\begin_inset Formula $0<p<1$
+\end_inset
+
+时，
+\begin_inset Formula $\left\Vert \cdot\right\Vert _{p}$
+\end_inset
+
+是
+\begin_inset Formula $L^{p}\left(E\right)$
+\end_inset
+
+上范数，为此，我们要证明正定性，齐次性（由定义平凡），三角不等式。三角不等式在
+\begin_inset Formula $L^{p}\left(E\right)$
+\end_inset
+
+下有特殊的名称即Minkowski不等式，为此，我们要按照Young不等式到Holder不等式到Minkowski不等式的路线来证。
+\end_layout
+
+\begin_layout Theorem
+（Young不等式）设
+\begin_inset Formula $p,q\in\left[1,\infty\right)$
+\end_inset
+
+,则对任意的
+\begin_inset Formula $a,b>0$
+\end_inset
+
+，
+\begin_inset Formula $\frac{1}{p}+\frac{1}{q}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+ab\leq\frac{a^{p}}{p}+\frac{b^{q}}{q}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+原式
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+
+\begin_inset Formula $lna+lnb\leq ln\left(\frac{a^{p}}{p}+\frac{b^{q}}{q}\right)$
+\end_inset
+
+，注意到
+\begin_inset Formula $lnx$
+\end_inset
+
+是凹函数，于是由Jensen不等式
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+ln\left(\frac{a^{p}}{p}+\frac{b^{q}}{q}\right)\geq\frac{lna^{p}}{p}+\frac{lnb^{p}}{q}=lna+lnb
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+（
+\begin_inset Formula $H\ddot{o}lder$
+\end_inset
+
+不等式）设
+\begin_inset Formula $1\leq p\leq\infty$
+\end_inset
+
+，
+\begin_inset Formula $\frac{1}{p}+\frac{1}{q}=1$
+\end_inset
+
+，对任意的
+\begin_inset Formula $f\in L^{p}\left(E\right)$
+\end_inset
+
+，
+\begin_inset Formula $g\in L^{q}\left(E\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\Vert fg\right\Vert _{1}\leq\left\Vert f\right\Vert _{p}\left\Vert g\right\Vert _{q}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+不妨设
+\begin_inset Formula $\left\Vert f\right\Vert _{p}=\left\Vert g\right\Vert _{q}=1$
+\end_inset
+
+，否则用
+\begin_inset Formula $\frac{f}{\left\Vert f\right\Vert _{p}}$
+\end_inset
+
+和
+\begin_inset Formula $\frac{g}{\left\Vert g\right\Vert _{q}}$
+\end_inset
+
+代替，从而由Yaung不等式
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left|fg\right|\leq\frac{\left|f\right|^{p}}{p}+\frac{\left|g\right|^{q}}{q}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是
+\begin_inset Formula 
+\[
+\left\Vert fg\right\Vert _{1}\leq\frac{\left\Vert f\right\Vert ^{p}}{p}+\frac{\left\Vert g\right\Vert ^{q}}{q}=\frac{1}{p}+\frac{1}{q}=1=\left\Vert f\right\Vert _{p}\left\Vert g\right\Vert _{q}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+（Minkowski不等式）设
+\begin_inset Formula $1<p\leq\infty$
+\end_inset
+
+，任意
+\begin_inset Formula $f\in L^{p}\left(E\right)$
+\end_inset
+
+，
+\begin_inset Formula $g\in L^{p}\left(E\right)$
+\end_inset
+
+，则
+\begin_inset Formula 
+\[
+\left\Vert f+g\right\Vert _{p}\leq\left\Vert f\right\Vert _{p}+\left\Vert g\right\Vert _{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+注意到
+\begin_inset Formula $h=\left|x\right|^{p}$
+\end_inset
+
+是凸函数，于是
+\begin_inset Formula 
+\[
+\left|\frac{1}{2}f+\frac{1}{2}g\right|^{p}\leq\left|\frac{1}{2}\left|f\right|+\frac{1}{2}\left|g\right|\right|^{p}\leq\frac{1}{2}\left|f\right|^{p}+\frac{1}{2}\left|g\right|^{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+从而
+\begin_inset Formula 
+\[
+\left|f+g\right|^{p}\leq2^{p-1}\left(\left|f\right|^{p}+\left|g\right|^{p}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是
+\begin_inset Formula 
+\[
+\left\Vert f+g\right\Vert _{p}^{p}=\int\left|f+g\right|^{p}dm=\int\left|f+g\right|^{p-1}\left|f+g\right|dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+带入得
+\begin_inset Formula 
+\[
+\int\left|f+g\right|^{p-1}\left|f+g\right|dm\leq\int\left|f+g\right|^{p-1}\left(\left|f\right|+\left|g\right|\right)dm
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\int\left|f+g\right|^{p-1}\left|f\right|dm+\int\left|f+g\right|^{p-1}\left|g\right|dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\overset{H\ddot{o}lder}{\leq}\left(\left(\int\left|f\right|^{p}dm\right)^{\frac{1}{p}}+\left(\int\left|g\right|^{q}dm\right)^{\frac{1}{q}}\right)\left(\int\left|f+g\right|^{p}dm\right)^{\frac{1}{q}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+=\left(\left\Vert f\right\Vert _{p}+\left\Vert g\right\Vert _{p}\right)\frac{\left\Vert f+g\right\Vert _{p}^{p}}{\left\Vert f+g\right\Vert _{p}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Question
+那么当
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+时，
+\begin_inset Formula $\left\Vert \cdot\right\Vert _{p}$
+\end_inset
+
+是
+\begin_inset Formula $L^{p}\left(E\right)$
+\end_inset
+
+上范数？
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+时，满足齐次，三角不等式，但不正定！因为
+\begin_inset Formula $\left\Vert f\right\Vert =0$
+\end_inset
+
+只能推出
+\begin_inset Formula $f=0$
+\end_inset
+
+ a.e，于是我们作等价关系
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f\sim g\overset{def}{=}f=g\text{在E上a.e}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+于是我们将
+\begin_inset Formula $L^{p}\left(E\right)/\sim$
+\end_inset
+
+记为
+\begin_inset Formula $L^{p}$
+\end_inset
+
+，这样就得到了我们想要的
+\end_layout
+
+\begin_layout Theorem
+当
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+时，
+\begin_inset Formula $\left\Vert \cdot\right\Vert _{p}$
+\end_inset
+
+是
+\begin_inset Formula $L^{p}\left(E\right)$
+\end_inset
+
+上范数
+\end_layout
+
+\begin_layout Standard
+更重要的我们有
+\end_layout
+
+\begin_layout Theorem
+（Riesz-Fischer）当
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+时，
+\begin_inset Formula $L^{p}\left(E\right)$
+\end_inset
+
+上完备赋范空间即Banach空间
+\end_layout
+
+\begin_layout Proof
+设
+\begin_inset Formula $\left\{ f_{k}\right\} _{k=1}^{\infty}\subset L^{p}\left(E\right)$
+\end_inset
+
+是Cauchy列，即任意
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+,存在N，任意的
+\begin_inset Formula $k,l>N$
+\end_inset
+
+，有
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left\Vert f_{k}-f_{l}\right\Vert _{p}\leq\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+取
+\begin_inset Formula $\varepsilon=\frac{1}{2}$
+\end_inset
+
+，存在
+\begin_inset Formula $K_{1}$
+\end_inset
+
+，使得
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\begin{array}{cccc}
+\left\Vert f_{k}-f_{k_{1}}\right\Vert _{p}\leq\frac{1}{2} &  &  & \forall k>K_{1}\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+取
+\begin_inset Formula $\varepsilon=\frac{1}{2^{2}}$
+\end_inset
+
+，存在
+\begin_inset Formula $K_{2}$
+\end_inset
+
+，使得
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\begin{array}{cccc}
+\left\Vert f_{k}-f_{k_{2}}\right\Vert _{p}\leq\frac{1}{2^{2}} &  &  & \forall k>K_{2}\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+以此类推，可以得到子列
+\begin_inset Formula $\left\{ f_{k_{j}}\right\} _{j=1}^{\infty}$
+\end_inset
+
+有
+\begin_inset Formula 
+\[
+\left\Vert f_{k_{j+1}}-f_{k_{j}}\right\Vert _{p}\leq\frac{1}{2^{j}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+令
+\begin_inset Formula 
+\[
+M\overset{def}{=}\left\Vert f_{1}\right\Vert _{p}+\stackrel[j=1]{\infty}{\sum}\left\Vert f_{k_{j+1}}-f_{k_{j}}\right\Vert _{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+g_{N}\overset{def}{=}\left|f_{1}\right|+\stackrel[j=1]{N}{\sum}\left|f_{k_{j+1}}-f_{k_{j}}\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+g\overset{def}{=}\left|f_{1}\right|+\stackrel[j=1]{\infty}{\sum}\left|f_{k_{j+1}}-f_{k_{j}}\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+则由Minkowski不等式
+\begin_inset Formula 
+\[
+\left\Vert g_{N}\right\Vert \leq\left\Vert f_{1}\right\Vert _{p}+\stackrel[j=1]{N}{\sum}\left\Vert f_{k_{j+1}}-f_{k_{j}}\right\Vert _{p}\leq M
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+而
+\begin_inset Formula $g_{N}\uparrow g$
+\end_inset
+
+，由MCT
+\begin_inset Formula 
+\[
+\int_{E}g^{p}dm=\underset{k\rightarrow\infty}{lim}\int_{E}g_{N}^{p}dm\leq M^{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是
+\begin_inset Formula $g\in L^{p}\left(E\right)$
+\end_inset
+
+，而注意到
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+f_{k_{N}}=f_{1}+\stackrel[j=1]{N}{\sum}\left(f_{k_{j+1}}-f_{k_{j}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+由绝对收敛推出点态收敛，又因为实数空间的完备性，于是存在
+\begin_inset Formula $f$
+\end_inset
+
+，使得
+\begin_inset Formula $f_{k_{N}}\rightarrow f$
+\end_inset
+
+，a.e，于是由Fatou引理
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\int_{E}f^{p}dm\leq\underset{N\rightarrow\infty}{lim}inf\int_{E}\left|f_{k_{N}}\right|^{p}dm\leq M^{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是
+\begin_inset Formula $f\in L^{p}\left(E\right)$
+\end_inset
+
+，另一方面，对任意
+\begin_inset Formula $l$
+\end_inset
+
+，有
+\begin_inset Formula 
+\[
+\left\Vert f-f_{k_{N}}\right\Vert _{p}^{p}=\int_{E}\left|f-f_{k_{N}}\right|^{p}dm\overset{Fatou}{\leq}\underset{N\rightarrow\infty}{lim}inf\int_{E}\left|f_{k_{j}}-f_{k_{N}}\right|^{p}dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是
+\begin_inset Formula 
+\[
+\underset{N\rightarrow\infty}{lim}\left\Vert f-f_{k_{N}}\right\Vert _{p}^{p}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+最后
+\begin_inset Formula 
+\[
+\left\Vert f-f_{l}\right\Vert _{p}^{p}\leq\left\Vert f-f_{k_{N}}\right\Vert _{p}^{p}+\left\Vert f_{l}-f_{k_{N}}\right\Vert _{p}^{p}\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Lec 14 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $L^{\infty}\left(E\right)$
+\end_inset
+
+是完备的
+\end_layout
+
+\begin_layout Proof
+略
+\end_layout
+
+\begin_layout Definition
+设
+\begin_inset Formula $\left\{ f_{k}\right\} _{k=1}^{\infty}\subset L^{p}\left(E\right)$
+\end_inset
+
+，
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+,如果存在
+\begin_inset Formula $f\in L^{p}\left(E\right)$
+\end_inset
+
+，使得当
+\begin_inset Formula $k\rightarrow\infty$
+\end_inset
+
+时
+\begin_inset Formula 
+\[
+\left\Vert f-f_{k}\right\Vert _{p}\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+则称
+\begin_inset Formula $f_{k}$
+\end_inset
+
+依
+\begin_inset Formula $L^{p}$
+\end_inset
+
+范数收敛于
+\begin_inset Formula $f$
+\end_inset
+
+，记为
+\begin_inset Formula $f_{k}\overset{L^{p}}{\rightarrow}f$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+若任意
+\begin_inset Formula $\varepsilon,\epsilon>0$
+\end_inset
+
+,存在N，任意的
+\begin_inset Formula $k>N$
+\end_inset
+
+，有
+\begin_inset Formula 
+\[
+m\left(\left\{ \left|f-f_{k}\right|\geq\varepsilon\right\} \right)<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+则称
+\begin_inset Formula $f_{k}$
+\end_inset
+
+依测度收敛于
+\begin_inset Formula $f$
+\end_inset
+
+，记为
+\begin_inset Formula $f_{k}\overset{m}{\rightarrow}f$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Conclusion
+\begin_inset Formula $f_{k}\overset{L^{p}}{\rightarrow}f\Longrightarrow f_{k}\overset{m}{\rightarrow}f$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+任意的
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+ ，有
+\begin_inset Formula 
+\[
+\int_{E}\left|f-f_{k}\right|^{p}dm\geq\varepsilon^{p}m\left(\left\{ \left|f-f_{k}\right|\geq\varepsilon\right\} \right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+即
+\begin_inset Formula 
+\[
+m\left(\left\{ \left|f-f_{k}\right|\geq\varepsilon\right\} \right)\leq\frac{1}{\varepsilon^{p}}\int_{E}\left|f-f_{k}\right|^{p}dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+而当
+\begin_inset Formula $k\rightarrow\infty$
+\end_inset
+
+时，右边趋于0，于是
+\begin_inset Formula 
+\[
+m\left(\left\{ \left|f-f_{k}\right|\geq\varepsilon\right\} \right)\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+注意
+\begin_inset Formula $f_{k}\overset{m}{\rightarrow}f\nRightarrow f_{k}\overset{a.e}{\rightarrow}f$
+\end_inset
+
+，例如
+\end_layout
+
+\begin_deeper
+\begin_layout Remark
+注意
+\begin_inset Formula $f_{k}\overset{a.e}{\rightarrow}f\nRightarrow f_{k}\overset{m}{\rightarrow}f$
+\end_inset
+
+,例如
+\begin_inset Formula $f_{k}\overset{def}{=}X_{\left[-k,k\right]}$
+\end_inset
+
+,
+\begin_inset Formula $f=1$
+\end_inset
+
+,则
+\begin_inset Formula $f_{k}\overset{a.e}{\rightarrow}f$
+\end_inset
+
+但是
+\begin_inset Formula $m\left(\left\{ \left|f-f_{k}\right|\geq\frac{1}{2}\right\} \right)=\infty$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+（Lebesgue）设
+\begin_inset Formula $m\left(E\right)<\infty$
+\end_inset
+
+且
+\begin_inset Formula $f_{k}\overset{a.e}{\rightarrow}f$
+\end_inset
+
+，且a.e有限，那么
+\begin_inset Formula $f_{k}\overset{m}{\rightarrow}f$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+任意的
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+，
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+，令
+\begin_inset Formula 
+\[
+E_{k}\left(\varepsilon\right)\overset{def}{=}\left\{ \left|f-f_{k}\right|\geq\varepsilon\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+对任意
+\begin_inset Formula 
+\[
+x\in\underset{k\rightarrow\infty}{limsup}E_{k}\left(\varepsilon\right)\overset{def}{=}\stackrel[j=1]{\infty}{∩}\stackrel[k\geq j]{\infty}{∪}E_{k}\left(\varepsilon\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+则有子列
+\begin_inset Formula $\left\{ f_{k_{j}}\right\} _{j=1}^{\infty}$
+\end_inset
+
+使得
+\begin_inset Formula 
+\[
+\left|f\left(x\right)-f_{k_{j}}\left(x\right)\right|\geq\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+从而
+\begin_inset Formula 
+\[
+f_{k}\nrightarrow f
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是
+\begin_inset Formula 
+\[
+\underset{k\rightarrow\infty}{limsup}E_{k}\left(\varepsilon\right)\subset\left\{ f_{k}\nrightarrow f\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+而由
+\begin_inset Formula $f_{k}\overset{a.e}{\rightarrow}f$
+\end_inset
+
+知道
+\begin_inset Formula 
+\[
+m\left(\underset{k\rightarrow\infty}{limsup}E_{k}\left(\varepsilon\right)\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+即
+\begin_inset Formula 
+\[
+\underset{j\rightarrow\infty}{lim}m\left(\stackrel[k\geq j]{\infty}{∪}E_{k}\left(\varepsilon\right)\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+特别的
+\begin_inset Formula 
+\[
+\underset{j\rightarrow\infty}{lim}m\left(E_{j}\left(\varepsilon\right)\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+如果
+\begin_inset Formula $m\left(E\right)<\infty$
+\end_inset
+
+这个条件不成立，那么
+\begin_inset Formula $m\left(E_{j}\left(\varepsilon\right)\right)$
+\end_inset
+
+可能是无穷，就无法使用测度连续性公式，或者B-C引理。
+\end_layout
+
+\begin_layout Theorem
+（Riesz）
+\begin_inset Formula $f_{k}\overset{m}{\rightarrow}f$
+\end_inset
+
+有子列
+\begin_inset Formula $f_{k_{j}}\overset{a.e}{\rightarrow}f$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+由定义知道任意
+\begin_inset Formula $\varepsilon,\epsilon>0$
+\end_inset
+
+,存在N，任意的
+\begin_inset Formula $k>N$
+\end_inset
+
+，有
+\begin_inset Formula 
+\[
+m\left(\left\{ \left|f-f_{k}\right|\geq\varepsilon\right\} \right)<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+从而对任意
+\begin_inset Formula $j$
+\end_inset
+
+，任意
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+存在
+\begin_inset Formula $k_{j+1}>k_{j}$
+\end_inset
+
+使得任意
+\begin_inset Formula $k\geq k_{j}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+m\left(\left\{ \left|f-f_{k_{j}}\right|\geq\varepsilon\right\} \right)<\frac{1}{2^{j}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是子列
+\begin_inset Formula $\left\{ f_{k_{j}}\right\} _{j=1}^{\infty}$
+\end_inset
+
+定义
+\begin_inset Formula 
+\[
+E_{j}\overset{def}{=}\left\{ \left|f-f_{k_{j}}\right|\geq\varepsilon\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是
+\begin_inset Formula 
+\[
+\stackrel[j=1]{\infty}{\sum}m\left(E_{j}\right)<\infty
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+由B-C引理知
+\begin_inset Formula 
+\[
+m\left(\underset{k\rightarrow\infty}{limsup}E_{k}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+这等价于
+\begin_inset Formula $f_{k_{j}}\overset{a.e}{\rightarrow}f$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Lec 15
+\end_layout
+
+\begin_layout Definition
+记号
+\begin_inset Formula 
+\[
+E\overset{dense}{\subset}X\Leftrightarrow\overline{E}=X
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+即E是X的稠密子集，这个概念是一般度量空间中的。而在
+\begin_inset Formula $L^{p}$
+\end_inset
+
+空间中可以根据范数来定义距离
+\begin_inset Formula $d\left(f,g\right)=\left\Vert f-g\right\Vert _{p}$
+\end_inset
+
+,则
+\begin_inset Formula $d$
+\end_inset
+
+满足三角不等式，正定，对称，是一个度量。
+\end_layout
+
+\begin_layout Theorem
+有如下结论：
+\end_layout
+
+\begin_layout Theorem
+1.简单函数全体
+\begin_inset Formula $\overset{dense}{\subset}L^{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+2.阶梯函数全体
+\begin_inset Formula $\overset{dense}{\subset}L^{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+1.Step1.我们先假设
+\begin_inset Formula $f\geq0$
+\end_inset
+
+，于是存在简单函数列
+\begin_inset Formula $\left\{ \varphi_{k}\right\} _{k=1}^{\infty}\uparrow\varphi$
+\end_inset
+
+，由MCT知
+\begin_inset Formula $\left\Vert \varphi_{k}-f\right\Vert \rightarrow0$
+\end_inset
+
+，
+\begin_inset Formula $f\in\text{简单函数全体}$
+\end_inset
+
+的闭包
+\end_layout
+
+\begin_layout Proof
+Step2.对于一般的
+\begin_inset Formula $f=f^{+}-f^{-}$
+\end_inset
+
+，分别考虑简单函数列再用三角不等式即证。
+\end_layout
+
+\begin_layout Proof
+2.为此我们只需证明
+\begin_inset Formula $\text{阶梯函数全体}\overset{dense}{\subset}\text{简单函数全体}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $C_{c}\left(\mathbb{R}^{n}\right)\overset{def}{=}\left\{ \mathbb{R}^{n}\text{上紧支连续函数}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们希望证明
+\begin_inset Formula $\text{C_{c}\left(\mathbb{R}^{n}\right)}\overset{dense}{\subset}L^{1}$
+\end_inset
+
+，为此我们需要证明一个引理
+\end_layout
+
+\begin_layout Lemma
+（Urysohn）设
+\begin_inset Formula $F\subset\mathbb{R}^{n}$
+\end_inset
+
+是闭集，
+\begin_inset Formula $G\subset\mathbb{R}^{n}$
+\end_inset
+
+是开集，
+\begin_inset Formula $F\subset G$
+\end_inset
+
+，则存在
+\begin_inset Formula $f\in C\left(\mathbb{R}^{n}\right)$
+\end_inset
+
+使得
+\end_layout
+
+\begin_layout Lemma
+1.
+\begin_inset Formula $0\leq f\leq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+2.f=1 on F
+\end_layout
+
+\begin_layout Lemma
+3.f=0 on 
+\begin_inset Formula $\mathbb{R}^{n}/G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+定义
+\begin_inset Formula 
+\[
+f\left(x\right)\overset{def}{=}\frac{dist\left(x,\mathbb{R}^{n}/G\right)}{dist\left(x,\mathbb{R}^{n}/G\right)+dist\left(x,F\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\text{C_{c}\left(\mathbb{R}^{n}\right)}\overset{dense}{\subset}L^{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+我们已经知道简单函数全体是稠密的，于是我们只要证明
+\begin_inset Formula $\text{C_{c}\left(\mathbb{R}^{n}\right)}\overset{dense}{\subset}\text{阶梯函数全体}$
+\end_inset
+
+，即任意的阶梯函数
+\begin_inset Formula 
+\[
+h=\stackrel[k=1]{N}{\sum}a_{k}X_{R_{k}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+其中
+\begin_inset Formula $R_{k}$
+\end_inset
+
+是矩体，存在函数列
+\begin_inset Formula $g_{k}\in\text{C_{c}\left(\mathbb{R}^{n}\right)}$
+\end_inset
+
+，使得当
+\begin_inset Formula $k\rightarrow\infty$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\Vert h-g_{k}\right\Vert \rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+即证任意
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+,任意的矩体R，存在
+\begin_inset Formula $g\in\text{\ensuremath{C_{c}\left(\mathbb{R}^{n}\right)}}\text{，使得}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left\Vert X_{R}-g\right\Vert <\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+我们放大R为开矩体
+\begin_inset Formula $\widetilde{R}$
+\end_inset
+
+使得
+\begin_inset Formula $m\left(\widetilde{R}/R\right)<\varepsilon$
+\end_inset
+
+，由Urysohn引理知道存在
+\begin_inset Formula $g\in\text{\ensuremath{C_{c}\left(\mathbb{R}^{n}\right)}}\text{，使得}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+1.
+\begin_inset Formula $0\leq g\leq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+2.
+\begin_inset Formula $g=1$
+\end_inset
+
+ on F
+\end_layout
+
+\begin_layout Proof
+3.
+\begin_inset Formula $g=0$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathbb{R}^{n}/G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+则g是满足要求的函数，证毕。
+\end_layout
+
+\begin_layout Conclusion
+设
+\begin_inset Formula $1\leq p<\infty$
+\end_inset
+
+,则有如下结论：
+\end_layout
+
+\begin_layout Conclusion
+1.简单函数全体
+\begin_inset Formula $\overset{dense}{\subset}L^{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Conclusion
+2.阶梯函数全体
+\begin_inset Formula $\overset{dense}{\subset}L^{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+定理19+简单放缩。
+\end_layout
+
+\begin_layout Standard
+下面是Lebesgue积分的一些其它性质
+\end_layout
+
+\begin_layout Conclusion
+（平移不变性）任意的
+\begin_inset Formula $h\in\mathbb{R}^{n}$
+\end_inset
+
+，
+\begin_inset Formula $\int f\left(x-h\right)dm=\int f\left(x\right)dm$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+对于
+\begin_inset Formula $f=X_{E}$
+\end_inset
+
+的情形，
+\begin_inset Formula $m\left(E+h\right)=m\left(E\right)$
+\end_inset
+
+，然后对简单函数
+\begin_inset Formula $f$
+\end_inset
+
+，再对
+\begin_inset Formula $f\geq0$
+\end_inset
+
+用简单函数逼近，用MCT也成立，对一般的
+\begin_inset Formula $f$
+\end_inset
+
+就分成正部负部最后三角不等式。
+\end_layout
+
+\begin_layout Conclusion
+\begin_inset Formula $\int f\left(\lambda x\right)dm=\lambda^{-n}\int f\left(x\right)dm$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Conclusion
+\begin_inset Formula $\int f\left(-x\right)dm=\int f\left(x\right)dm$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+接下来要讲述的是Fubini定理，即多重积分的换序，考虑到其证明难度，笔者在下面某些定理下不再给出证明。值得注意的是考虑到积分的定义不同，无法想当然地从Riem
+ann积分的类似方法去证明。在介绍它们之前先引入一些基本的定义
+\end_layout
+
+\begin_layout Definition
+对
+\begin_inset Formula $E\subset\mathbb{R}^{n_{1}+n_{2}}$
+\end_inset
+
+和
+\begin_inset Formula $y\in\mathbb{R}^{n_{1}}$
+\end_inset
+
+，
+\begin_inset Formula $x\in\mathbb{R}^{n_{2}}$
+\end_inset
+
+，定义
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+E^{y}\overset{def}{=}\left\{ x\in\mathbb{R}^{n_{2}}\mid\left(x,y\right)\in E\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+E_{x}\overset{def}{=}\left\{ y\in\mathbb{R}^{n_{1}}\mid\left(x,y\right)\in E\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+于是对于E上的函数
+\begin_inset Formula $f$
+\end_inset
+
+，有定义
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+f^{y}\overset{def}{=}f\left(x,y\right) &  & x\in\mathbb{R}^{n_{2}}\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+f_{x}\overset{def}{=}f\left(x,y\right) &  & y\in\mathbb{R}^{n_{1}}\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+很自然地会有这样的问题
+\end_layout
+
+\begin_layout Question
+对
+\begin_inset Formula $E\subset\mathbb{R}^{n_{1}+n_{2}}$
+\end_inset
+
+可测，是否有
+\begin_inset Formula $E^{y},E_{x}$
+\end_inset
+
+可测？如果
+\begin_inset Formula $f$
+\end_inset
+
+可测，是否有
+\begin_inset Formula $f^{y}$
+\end_inset
+
+，
+\begin_inset Formula $f_{x}$
+\end_inset
+
+可测？
+\end_layout
+
+\begin_layout Example
+设A是
+\begin_inset Formula $\mathbb{R}^{1}$
+\end_inset
+
+中的不可测集，则因为
+\begin_inset Formula $E=A\times\left\{ 0\right\} $
+\end_inset
+
+是零测集，故是紧支的，但是A是不可测的，同理
+\begin_inset Formula $f=X_{E}$
+\end_inset
+
+可测但是
+\begin_inset Formula $f^{*}=X_{A}$
+\end_inset
+
+不可测。Fubini告诉我们在a.e的情况下是对的。
+\end_layout
+
+\begin_layout Section
+Lec 16
+\end_layout
+
+\begin_layout Theorem
+(Fubini)设
+\begin_inset Formula $f\in L^{1}\left(\mathbb{R}^{n_{1}+n_{2}}\right)$
+\end_inset
+
+，则有
+\end_layout
+
+\begin_layout Theorem
+（
+\begin_inset Formula $F_{1}$
+\end_inset
+
+）对 a.e 
+\begin_inset Formula $y\in\mathbb{R}^{n_{2}}$
+\end_inset
+
+,
+\begin_inset Formula $f^{y}\in L^{1}\left(\mathbb{R}^{n_{1}}\right)$
+\end_inset
+
+.对 a.e 
+\begin_inset Formula $x\in\mathbb{R}^{n_{1}}$
+\end_inset
+
+,
+\begin_inset Formula $f_{x}\in L^{1}\left(\mathbb{R}^{n_{2}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+（
+\begin_inset Formula $F_{2}$
+\end_inset
+
+） 
+\begin_inset Formula 
+\[
+y\mapsto\int_{\mathbb{R}^{n_{1}}}fdx\in L^{1}\left(\mathbb{R}^{n_{2}}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x\mapsto\int_{\mathbb{R}^{n_{2}}}fdy\in L^{1}\left(\mathbb{R}^{n_{1}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+（
+\begin_inset Formula $F_{3}$
+\end_inset
+
+）
+\begin_inset Formula 
+\[
+\int_{\mathbb{R}^{n_{1}+n_{2}}}fdm=\int_{\mathbb{R}^{n_{2}}}\left[\int_{\mathbb{R}^{n_{1}}}fdx\right]dy=\int_{\mathbb{R}^{n_{1}}}\left[\int_{\mathbb{R}^{n_{2}}}fdy\right]dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+（Tonelli）设
+\begin_inset Formula $f\in L^{+}\left(\mathbb{R}^{n_{1}+n_{2}}\right)$
+\end_inset
+
+，则有
+\end_layout
+
+\begin_layout Theorem
+（
+\begin_inset Formula $T_{1}$
+\end_inset
+
+）对 a.e 
+\begin_inset Formula $y\in\mathbb{R}^{n_{2}}$
+\end_inset
+
+,
+\begin_inset Formula $f^{y}\in L^{+}\left(\mathbb{R}^{n_{1}}\right)$
+\end_inset
+
+.对 a.e 
+\begin_inset Formula $x\in\mathbb{R}^{n_{1}}$
+\end_inset
+
+,
+\begin_inset Formula $f_{x}\in L^{+}\left(\mathbb{R}^{n_{2}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+（
+\begin_inset Formula $T_{2}$
+\end_inset
+
+） 
+\begin_inset Formula 
+\[
+y\mapsto\int_{\mathbb{R}^{n_{1}}}fdx\in L^{+}\left(\mathbb{R}^{n_{2}}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x\mapsto\int_{\mathbb{R}^{n_{2}}}fdy\in L^{+}\left(\mathbb{R}^{n_{1}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+（
+\begin_inset Formula $T_{3}$
+\end_inset
+
+）
+\begin_inset Formula 
+\[
+\int_{\mathbb{R}^{n_{1}+n_{2}}}fdm=\int_{\mathbb{R}^{n_{2}}}\left[\int_{\mathbb{R}^{n_{1}}}fdx\right]dy=\int_{\mathbb{R}^{n_{1}}}\left[\int_{\mathbb{R}^{n_{2}}}fdy\right]dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Lec 17
+\end_layout
+
+\begin_layout Corollary
+由Fubini定理取
+\begin_inset Formula $f=X_{E}$
+\end_inset
+
+直接得到：设
+\begin_inset Formula $E\in\mathcal{L}_{\mathbb{R}^{n_{1}+n_{2}}}$
+\end_inset
+
+，则有
+\end_layout
+
+\begin_layout Corollary
+（
+\begin_inset Formula $F_{1}$
+\end_inset
+
+）对 a.e 
+\begin_inset Formula $y\in\mathbb{R}^{n_{2}}$
+\end_inset
+
+,
+\begin_inset Formula $E^{y}\in\mathcal{L}_{\mathbb{R}^{n_{1}}}$
+\end_inset
+
+.对 a.e 
+\begin_inset Formula $x\in\mathbb{R}^{n_{1}}$
+\end_inset
+
+,
+\begin_inset Formula $E_{x}\in\mathcal{L}_{\mathbb{R}^{n_{2}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+（
+\begin_inset Formula $F_{2}$
+\end_inset
+
+） 
+\begin_inset Formula 
+\[
+y\rightarrow m_{n_{1}}\left(E^{y}\right)\in L^{1}\left(\mathbb{R}^{n_{2}}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x\rightarrow m_{n_{2}}\left(E_{x}\right)\in L^{1}\left(\mathbb{R}^{n_{1}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+（
+\begin_inset Formula $F_{3}$
+\end_inset
+
+）
+\begin_inset Formula 
+\[
+m\left(E\right)=\int_{\mathbb{R}^{n_{2}}}m\left(E^{y}\right)dy=\int_{\mathbb{R}^{n_{1}}}m\left(E_{x}\right)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+我们想知道Fubini的某种逆定理是否成立，即任意
+\begin_inset Formula $y\in\mathbb{R}^{n_{2}}$
+\end_inset
+
+，
+\begin_inset Formula $E^{y}\in\mathcal{L}_{\mathbb{R}^{n_{1}}}$
+\end_inset
+
+，那么是否有
+\begin_inset Formula $E\in\mathcal{L}_{\mathbb{R}^{n_{1}+n_{2}}}$
+\end_inset
+
+？
+\end_layout
+
+\begin_layout Example
+令
+\begin_inset Formula 
+\[
+E\overset{def}{=}\left[0\text{,1}\right]\times A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+其中A是
+\begin_inset Formula $\mathbb{R}^{1}$
+\end_inset
+
+中的不可测集，则
+\begin_inset Formula 
+\[
+E^{y}=\begin{cases}
+\begin{array}{c}
+\left[0,1\right]\\
+\emptyset
+\end{array} & \begin{array}{cc}
+if & y\in A\\
+if & y\notin A
+\end{array}\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+但是
+\begin_inset Formula $E\notin\mathcal{L}_{\mathbb{R}^{2}}$
+\end_inset
+
+，否则对a.e的
+\begin_inset Formula $x\in\left[0,1\right]$
+\end_inset
+
+有
+\begin_inset Formula $E_{x}\in\mathcal{L}_{\mathbb{R}^{1}}$
+\end_inset
+
+，但是对于任意的
+\begin_inset Formula $x\in\left[0,1\right]$
+\end_inset
+
+，
+\begin_inset Formula $E_{x}=A$
+\end_inset
+
+不可测!
+\end_layout
+
+\begin_layout Standard
+下面的定理告诉我们在某些好的情况下a.e是可以去除的。
+\end_layout
+
+\begin_layout Theorem
+如果
+\begin_inset Formula $E_{1}\times E_{2}\in\mathcal{L}_{\mathbb{R}^{n_{1}+n_{2}}}$
+\end_inset
+
+，且
+\begin_inset Formula $m_{n_{2}}^{*}\left(E_{2}\right)>0$
+\end_inset
+
+，那么
+\begin_inset Formula $E_{1}\in\mathcal{L}_{\mathbb{R}^{n_{1}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $E_{1}\times E_{2}\in\mathcal{L}_{\mathbb{R}^{n_{1}+n_{2}}}\Leftrightarrow X_{E_{1}\times E_{2}}\in L^{+}\left(\mathbb{R}^{n_{1}+n_{2}}\right)$
+\end_inset
+
+，由Tonelli定理，对 a.e 
+\begin_inset Formula $y\in\mathbb{R}^{n_{2}}$
+\end_inset
+
+,
+\begin_inset Formula $X_{E_{1}\times E_{2}}^{y}\in L^{+}\left(\mathbb{R}^{n_{1}}\right)$
+\end_inset
+
+，而
+\begin_inset Formula 
+\[
+X_{E_{1}\times E_{2}}^{y}\left(x\right)=X_{E_{1}\times E_{2}}\left(x,y\right)=X_{E_{1}}\left(x\right)\cdot X_{E_{2}}\left(y\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+仅需证明，存在
+\begin_inset Formula $y\in E_{2}$
+\end_inset
+
+，使得
+\begin_inset Formula $X_{E_{1}\times E_{2}}^{y}\in L^{+}\left(\mathbb{R}^{n_{1}}\right)$
+\end_inset
+
+，令
+\begin_inset Formula 
+\[
+F\overset{def}{=}\left\{ y\in\mathbb{R}^{n_{2}}\mid\left(E_{1}\times E_{2}\right)^{y}\in\mathcal{L}_{\mathbb{R}^{n_{1}}}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+则
+\begin_inset Formula $m\left(F^{c}\right)=0$
+\end_inset
+
+，而
+\begin_inset Formula $E_{2}=\left(E_{2}∩F\right)∪\left(E_{2}∩F^{c}\right)$
+\end_inset
+
+，由外侧度的性质
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula 
+\[
+0<m^{*}\left(E_{2}\right)\leq m^{*}\left(E_{2}∩F\right)+m^{*}\left(E_{2}∩F^{c}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+从而
+\begin_inset Formula $m^{*}\left(E_{2}∩F\right)>0$
+\end_inset
+
+,即
+\begin_inset Formula $E_{2}∩F\neq\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么Fubini定理的逆定理的形式到底该是什么呢？下面的定理回答了这个问题
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\text{如果}E_{1}\in\mathcal{L}_{\mathbb{R}^{n_{1}}}\text{，且}E_{2}\in\mathcal{L}_{\mathbb{R}^{n_{2}}}\text{，那么}E_{1}\times E_{2}\in\mathcal{L}_{\mathbb{R}^{n_{1}+n_{2}}}$
+\end_inset
+
+且
+\begin_inset Formula $m_{n_{1}+n_{2}}\left(E_{1}\times E_{2}\right)=m_{n_{1}}\left(E_{1}\right)\cdot m_{n_{2}}\left(E_{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+我们需要先证明一个引理
+\end_layout
+
+\begin_deeper
+\begin_layout Lemma
+任意的
+\begin_inset Formula $E_{1}\in\mathbb{R}^{n_{1}}$
+\end_inset
+
+,
+\begin_inset Formula $E_{2}\in\mathbb{R}^{n_{2}}$
+\end_inset
+
+,有
+\begin_inset Formula $m_{n_{1}+n_{2}}^{*}\left(E_{1}\times E_{2}\right)\leq m_{n_{1}}^{*}\left(E_{1}\right)\cdot m_{n_{2}}^{*}\left(E_{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+不妨设
+\begin_inset Formula $m_{n_{1}}^{*}\left(E_{1}\right)\text{，}m_{n_{2}}^{*}\left(E_{2}\right)<\infty$
+\end_inset
+
+,则对任意的
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+,存在
+\begin_inset Formula $E_{1},E_{2}$
+\end_inset
+
+的方体覆盖
+\begin_inset Formula $\left\{ Q_{k}^{1}\right\} _{k=1}^{\infty}$
+\end_inset
+
+，
+\begin_inset Formula $\left\{ Q_{j}^{2}\right\} _{j=1}^{\infty}$
+\end_inset
+
+使得
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\stackrel[k=1]{\infty}{\sum}\left|Q_{k}^{1}\right|<m_{n_{1}}^{*}\left(E_{1}\right)+\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\stackrel[j=1]{\infty}{\sum}\left|Q_{j}^{2}\right|<m_{n_{2}}^{*}\left(E_{2}\right)+\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+则
+\begin_inset Formula $\left\{ Q_{k}^{1}\times Q_{j}^{2}\right\} _{j,k}$
+\end_inset
+
+为
+\begin_inset Formula $E_{1}\times E_{2}$
+\end_inset
+
+的一个矩体覆盖，于是
+\begin_inset Formula 
+\[
+m_{n_{1}+n_{2}}^{*}\left(E_{1}\times E_{2}\right)\leq\stackrel[j,k=1]{\infty}{\sum}\left|Q_{k}^{1}\times Q_{j}^{2}\right|=\left(\stackrel[k=1]{\infty}{\sum}\left|Q_{k}^{1}\right|\right)\left(\stackrel[j=1]{\infty}{\sum}\left|Q_{j}^{2}\right|\right)\leq\left(m_{n_{1}}^{*}\left(E_{1}\right)+\varepsilon\right)\left(m_{n_{2}}^{*}\left(E_{2}\right)+\varepsilon\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+令
+\begin_inset Formula $\varepsilon\rightarrow0^{+}$
+\end_inset
+
+，即得证
+\end_layout
+
+\begin_layout Standard
+现在我们给出定理24的证明
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+先证
+\begin_inset Formula $E_{1}\times E_{2}\in\mathcal{L}_{\mathbb{R}^{n_{1}+n_{2}}}$
+\end_inset
+
+。由
+\begin_inset Formula $E_{1}\subset\mathbb{R}^{n_{1}},E_{2}\subset\mathbb{R}^{n_{2}}$
+\end_inset
+
+知
+\begin_inset Formula $E_{1}=G_{1}/Z_{1}$
+\end_inset
+
+,
+\begin_inset Formula $E_{2}=G_{2}/Z_{2}$
+\end_inset
+
+,其中
+\begin_inset Formula $G_{i}\in G_{\delta}$
+\end_inset
+
+，
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+为零测集，则
+\begin_inset Formula $G_{1}\times G_{2}$
+\end_inset
+
+为
+\begin_inset Formula $\mathbb{R}^{n_{1}+n_{2}}$
+\end_inset
+
+的
+\begin_inset Formula $G_{\delta}$
+\end_inset
+
+集，而
+\begin_inset Formula 
+\[
+\left(G_{1}\times G_{2}\right)/\left(E_{1}\times E_{2}\right)\subset\left[\left(G_{1}/E_{1}\right)\times G_{2}\right]∪\left[\left(G_{2}/E_{2}\right)\times G_{1}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+根据引理2，
+\begin_inset Formula $m^{*}\left(\left(G_{1}\times G_{2}\right)/\left(E_{1}\times E_{2}\right)\right)=0$
+\end_inset
+
+，于是
+\begin_inset Formula $E_{1}\times E_{2}\in\mathcal{L}_{\mathbb{R}^{n_{1}+n_{2}}}$
+\end_inset
+
+。再由Fubini定理
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\int_{\mathbb{R}^{n_{1}+n_{2}}}X_{E_{1}\times E_{2}}dm=m_{n_{1}+n_{2}}\left(E_{1}\times E_{2}\right)=\int_{\mathbb{R}^{n_{2}}}\left[\int_{\mathbb{R}^{n_{1}}}X_{E_{1}\times E_{2}}dx\right]dy=m_{n_{1}}\left(E_{1}\right)\cdot m_{n_{2}}\left(E_{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+下面考虑的是积分的几何意义,先介绍一个引理
+\end_layout
+
+\begin_layout Lemma
+设
+\begin_inset Formula $f$
+\end_inset
+
+是
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+上的可测函数，令
+\begin_inset Formula $\widetilde{f}\left(x,y\right)\overset{def}{=}f\left(x\right)$
+\end_inset
+
+,
+\begin_inset Formula $\left(x,y\right)\in\mathbb{R}^{n_{1}+n_{2}}$
+\end_inset
+
+,则
+\begin_inset Formula $\widetilde{f}\left(x,y\right)$
+\end_inset
+
+是
+\begin_inset Formula $\mathbb{R}^{n_{1}+n_{2}}$
+\end_inset
+
+上的可测函数
+\end_layout
+
+\begin_layout Proof
+对任意的
+\begin_inset Formula $a\in R$
+\end_inset
+
+，
+\begin_inset Formula $E\left(a\right)\overset{def}{=}\left\{ x\in\mathbb{R}^{n_{1}}:f\left(x\right)<a\right\} \in\mathcal{L}_{\mathbb{R}^{n_{1}}}$
+\end_inset
+
+,于是
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+f\in L^{+}\left(\mathbb{R}^{n}\right)\left\{ \left(x,y\right)\in\mathbb{R}^{n_{1}+n_{2}}:\widetilde{f}\left(x,y\right)<a\right\} =E\left(a\right)\times\mathbb{R}^{n_{2}}\overset{\text{定\text{理24}}}{\in}\mathcal{L}_{\mathbb{R}^{n_{1}+n_{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+设
+\begin_inset Formula $f$
+\end_inset
+
+是
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+上的非负函数，令
+\begin_inset Formula 
+\[
+A\overset{def}{=}\left\{ \left(x,y\right)\in\mathbb{R}^{n+1}:0\leq y\leq f\left(x\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+则
+\end_layout
+
+\begin_layout Theorem
+1.
+\begin_inset Formula $f\in L^{+}\left(\mathbb{R}^{n}\right)\Leftrightarrow A\in\mathcal{L}_{\mathbb{R}^{n+1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+2.
+\begin_inset Formula $f\in L^{+}\left(\mathbb{R}^{n}\right)\Rightarrow\int_{\mathbb{R}^{n_{1}}}f\left(x\right)dx=m_{n+1}\left(A\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+1.
+\begin_inset Formula $\Rightarrow:$
+\end_inset
+
+
+\begin_inset Formula $f\in L^{+}\left(\mathbb{R}^{n}\right)\overset{\text{引\text{理3}}}{\Rightarrow}F\left(x,y\right)\overset{def}{=}y-f\left(x\right)$
+\end_inset
+
+在
+\begin_inset Formula $\mathbb{R}^{n+1}$
+\end_inset
+
+上可测
+\begin_inset Formula $\Rightarrow A=\left\{ y\geq0\right\} ∩\left\{ F\leq0\right\} $
+\end_inset
+
+可测
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Leftarrow:$
+\end_inset
+
+对任意
+\begin_inset Formula $x\in\mathbb{R}^{n}$
+\end_inset
+
+，
+\begin_inset Formula $A_{x}=\left[0,f\left(x\right)\right]\in\mathcal{L}_{\mathbb{R}^{n}}$
+\end_inset
+
+,且
+\begin_inset Formula $x\longrightarrow m\left(A_{x}\right)\in L^{+}\left(\mathbb{R}\right)$
+\end_inset
+
+，而
+\begin_inset Formula $f\left(x\right)=m_{1}\left(A_{x}\right)$
+\end_inset
+
+,即
+\begin_inset Formula $f\in L^{+}\left(\mathbb{R}^{n}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+2.由推论1，
+\begin_inset Formula $m_{n+1}\left(A\right)=\int_{\mathbb{R}^{n}}f\left(x\right)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $f$
+\end_inset
+
+是
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+上的可测函数
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+f
+\begin_inset Formula $\left(x-y\right)$
+\end_inset
+
+在
+\begin_inset Formula $\mathbb{R}^{2n}$
+\end_inset
+
+可测
+\end_layout
+
+\begin_layout Section
+Lec 18
+\end_layout
+
+\begin_layout Standard
+回忆Riemann积分下的Newton-Leibniz formula,现在探究在Lebesgue积分框架下的微积分基本定理。下面是我们感兴趣的问题。
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $f\in C\left[a,b\right]$
+\end_inset
+
+,令
+\begin_inset Formula $F\left(x\right)\overset{def}{=}$
+\end_inset
+
+
+\begin_inset Formula $\int_{a}^{x}f\left(t\right)dt$
+\end_inset
+
+,
+\begin_inset Formula $x\in\left[a,b\right]$
+\end_inset
+
+,则
+\begin_inset Formula $F\left(x\right)$
+\end_inset
+
+在
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+上可微，且
+\begin_inset Formula $F^{\prime}\left(x\right)=f\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Question
+把
+\begin_inset Formula $f\in C\left[a,b\right]$
+\end_inset
+
+换成
+\begin_inset Formula $f\in L^{1}\left(\left[a,b\right]\right)$
+\end_inset
+
+，原命题是否成立？
+\end_layout
+
+\begin_layout Standard
+实际上在a.e下是对的（LDT）
+\end_layout
+
+\begin_layout Theorem
+F可微且
+\begin_inset Formula $F^{\prime}\in R\left[a,b\right]$
+\end_inset
+
+,则
+\begin_inset Formula $\int_{a}^{x}F^{\prime}\left(t\right)dt=F\left(x\right)-F\left(a\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Question
+条件改为
+\begin_inset Formula $\begin{cases}
+\begin{array}{c}
+F\\
+F^{\prime}
+\end{array} & \begin{array}{c}
+a.e\text{可\text{微}}\\
+\in L^{1}\left[a,b\right]
+\end{array}\end{cases}$
+\end_inset
+
+,原命题是否成立？
+\end_layout
+
+\begin_layout Example
+原命题不成立，比如
+\begin_inset Formula 
+\[
+F\left(x\right)=\begin{cases}
+\begin{array}{c}
+A\\
+0\\
+B
+\end{array} & \begin{array}{c}
+x=a\\
+a<x<b\\
+x=b
+\end{array}\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Question
+F连续且a.e可微，且
+\begin_inset Formula $F^{\prime}\in R\left[a,b\right]$
+\end_inset
+
+，原命题是否成立？、
+\end_layout
+
+\begin_layout Example
+原命题不成立，反例是Contor-Lebesgue函数
+\end_layout
+
+\begin_layout Standard
+注意到
+\begin_inset Formula $F^{\prime}=f\Longleftrightarrow$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\underset{h\rightarrow0}{lim}\frac{1}{h}\int_{x}^{x+h}f\left(y\right)dy=f\left(x\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Question
+\begin_inset Formula $f\in L^{1}\left(\mathbb{R}^{n}\right)$
+\end_inset
+
+,是否有
+\begin_inset Formula 
+\[
+\underset{m\left(B\right)\rightarrow0}{lim}\frac{1}{m\left(B\right)}\int_{B}fdm=f\left(x\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Question
+对于a.e的
+\begin_inset Formula $x\in\mathbb{R}^{n}$
+\end_inset
+
+？
+\end_layout
+
+\begin_layout Definition
+定义
+\begin_inset Formula 
+\[
+L_{loc}^{1}\overset{def}{=}\left\{ f:f\in L^{1}\left(K\right),\forall K\overset{\text{紧}}{\subset}\mathbb{R}^{n}\right\} =\left\{ \text{局\text{部\text{可\text{积函数}}}}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+显然有
+\begin_inset Formula $L_{loc}^{1}\supset L^{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+（Lebesgue积分定理）设
+\begin_inset Formula $f\in L_{loc}^{1}$
+\end_inset
+
+,则对a.e的
+\begin_inset Formula $x\in\mathbb{R}^{n}$
+\end_inset
+
+有
+\begin_inset Formula 
+\[
+\underset{m\left(B\right)\rightarrow0}{lim}\frac{1}{m\left(B\right)}\int_{B}fdm=f\left(x\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+其中
+\begin_inset Formula $x\in B$
+\end_inset
+
+，B为球体
+\end_layout
+
+\begin_layout Standard
+为了证明LDT,需要一系列的准备
+\end_layout
+
+\begin_layout Definition
+对
+\begin_inset Formula $f\in L_{loc}^{1}$
+\end_inset
+
+，定义
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+f^{*}\left(x\right)\overset{def}{=}\underset{x\in B}{sup}\frac{1}{m\left(B\right)}\int_{B}\left|f\right|dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+为
+\begin_inset Formula $f$
+\end_inset
+
+的非中心Hardy-Littlewood极大函数，定义
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+Mf\left(x\right)\overset{def}{=}\underset{r>0}{sup}\frac{1}{m\left(B_{r}\left(x\right)\right)}\int_{B_{r}\left(x\right)}\left|f\right|dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+为
+\begin_inset Formula $f$
+\end_inset
+
+的中心H-L极大函数
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $f\in L_{loc}^{1}\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula $Mf\text{下\text{半连续}}$
+\end_inset
+
+ i.e 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\forall a\in\mathbb{R}\text{，}\left\{ Mf>a\right\} \text{是开集}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x\in\left\{ Mf>a\right\} \Leftrightarrow a<Mf\left(x\right)$
+\end_inset
+
+,于是存在
+\begin_inset Formula $r>0$
+\end_inset
+
+,使得
+\begin_inset Formula 
+\[
+a<\frac{1}{m\left(B_{r}\left(x\right)\right)}\int_{B_{r}\left(x\right)}\left|f\right|dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是存在
+\begin_inset Formula $p>r$
+\end_inset
+
+,使得
+\begin_inset Formula 
+\[
+a<\frac{1}{m\left(B_{p}\left(x\right)\right)}\int_{B_{r}\left(x\right)}\left|f\right|dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是任意的
+\begin_inset Formula $y\in B_{p-r}\left(x\right)$
+\end_inset
+
+，
+\begin_inset Formula $B_{r}\left(x\right)\subset B_{p}\left(y\right)$
+\end_inset
+
+,于是
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+a<\frac{1}{m\left(B_{p}\left(x\right)\right)}\int_{B_{r}\left(x\right)}\left|f\right|dm\leq\frac{1}{m\left(B_{p}\left(y\right)\right)}\int_{B_{p}\left(y\right)}\left|f\right|dm
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+从而
+\begin_inset Formula 
+\[
+B_{p-r}\left(x\right)\subset\left\{ Mf>a\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+即
+\begin_inset Formula $\left\{ Mf>a\right\} \text{是开集}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $f\in L_{loc}^{1}\Rightarrow Mf\text{可\text{测}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+（H-L极大定理）
+\end_layout
+
+\end_body
+\end_document

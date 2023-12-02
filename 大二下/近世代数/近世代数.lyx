@@ -1,0 +1,3112 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\begin_preamble
+% 解决pdflatex不支持插入eps图片问题
+\usepackage{epstopdf}
+\end_preamble
+\options UTF8
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+eqs-within-sections
+theorems-named
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize b4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+近世代数期末复习
+\end_layout
+
+\begin_layout Author
+江江
+\end_layout
+
+\begin_layout Date
+06/12/23
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+环和域
+\end_layout
+
+\begin_layout Subsection
+基本概念
+\end_layout
+
+\begin_layout Definition
+环是一个集合
+\begin_inset Formula $R$
+\end_inset
+
+和在集合
+\begin_inset Formula $R$
+\end_inset
+
+上的两个二元运算满足
+\end_layout
+
+\begin_layout Enumerate
+对加法成Abel群，零元记为0
+\end_layout
+
+\begin_layout Enumerate
+对乘法是半群，即对乘法满足封闭和结合律（不要求有幺有逆）
+\end_layout
+
+\begin_layout Enumerate
+加法和乘法满足两个分配律，即
+\begin_inset Formula 
+\[
+a\left(b+c\right)=ab+ac,\left(b+c\right)a=ba+ca
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula $a\left(b+c\right)$
+\end_inset
+
+一般不等于
+\begin_inset Formula $\left(b+c\right)a$
+\end_inset
+
+，尽管加法可交换，但是乘法不行
+\end_layout
+
+\begin_layout Definition
+交换环指的是环对乘法可交换（称某某环，则对乘法均不要求有幺有逆）
+\end_layout
+
+\begin_layout Remark
+环
+\begin_inset Formula $R$
+\end_inset
+
+中的零元素唯一，如果环
+\begin_inset Formula $R$
+\end_inset
+
+有幺元素，则它也唯一
+\end_layout
+
+\begin_layout Theorem
+设
+\begin_inset Formula $R$
+\end_inset
+
+为环
+\begin_inset Formula 
+\[
+\left(\stackrel[i=1]{n}{\sum}a_{i}\right)\left(\stackrel[k=1]{m}{\sum}b_{k}\right)=\stackrel[i=1]{n}{\sum}\stackrel[k=1]{m}{\sum}a_{i}b_{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $a$
+\end_inset
+
+为环
+\begin_inset Formula $R$
+\end_inset
+
+的左零因子
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+存在非零元素
+\begin_inset Formula $b\in R$
+\end_inset
+
+，使得
+\begin_inset Formula $ab=0$
+\end_inset
+
+。
+\begin_inset Formula $a$
+\end_inset
+
+为环
+\begin_inset Formula $R$
+\end_inset
+
+的右零因子
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+存在非零元素
+\begin_inset Formula $b\in R$
+\end_inset
+
+，使得
+\begin_inset Formula $ba=0$
+\end_inset
+
+,如果同时为左零因子和右零因子，则称
+\begin_inset Formula $a$
+\end_inset
+
+为零因子。
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+设
+\begin_inset Formula $R$
+\end_inset
+
+为含幺环，
+\begin_inset Formula $R$
+\end_inset
+
+中元素
+\begin_inset Formula $a$
+\end_inset
+
+左可逆
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+存在元素
+\begin_inset Formula $b\in R$
+\end_inset
+
+，使得
+\begin_inset Formula $ba=1$
+\end_inset
+
+
+\begin_inset Formula $R$
+\end_inset
+
+中元素
+\begin_inset Formula $a$
+\end_inset
+
+右可逆
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+存在元素
+\begin_inset Formula $b\in R$
+\end_inset
+
+，使得
+\begin_inset Formula $ab=1$
+\end_inset
+
+，如果同时为左零因子和右零因子，则称
+\begin_inset Formula $a$
+\end_inset
+
+可逆，称·
+\begin_inset Formula $a$
+\end_inset
+
+为
+\begin_inset Formula $R$
+\end_inset
+
+中单位，含幺环全体单位形成乘法群，叫做
+\begin_inset Formula $R$
+\end_inset
+
+的单位群，表示成
+\begin_inset Formula $U\left(R\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+可逆元必然不为零因子，因为若
+\begin_inset Formula $ba=0$
+\end_inset
+
+，则
+\begin_inset Formula $b=b\left(aa^{-1}\right)=\left(ba\right)a^{-1}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+设
+\begin_inset Formula $R$
+\end_inset
+
+为含幺交换环，且
+\begin_inset Formula $0\neq1$
+\end_inset
+
+，即不为零环,如果环
+\begin_inset Formula $R$
+\end_inset
+
+没有零因子，则称
+\begin_inset Formula $R$
+\end_inset
+
+为整环
+\begin_inset Formula $(Domain)$
+\end_inset
+
+,比如整数Z对加法乘法
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+设
+\begin_inset Formula $R$
+\end_inset
+
+为含幺环，如果R中非零元均为单位，那么R叫做体（Skew-field），如果体又是交换环则称R为域（Field）。
+\end_layout
+
+\begin_layout Remark
+即是否有逆是能否“升级”的关键，交换只是一个前缀。注：所有的域都是整环。因为单位必然不是零因子。
+\end_layout
+
+\begin_layout Example
+n阶实方阵全体，构成含幺环，表示成
+\begin_inset Formula $M_{n}\left(R\right)$
+\end_inset
+
+。更一般地，对任意环G，都可以定义
+\begin_inset Formula $M_{n}\left(G\right)$
+\end_inset
+
+，如果
+\begin_inset Formula $G$
+\end_inset
+
+为含幺交换环，则可以定义行列式，并且具有行列式基本性质。注意
+\begin_inset Formula 
+\[
+U\left(M_{n}\left(G\right)\right)=\left\{ A\in M_{n}\left(G\right)\mid detA\in U\left(G\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+由
+\begin_inset Formula 
+\[
+A\cdot adjA=detA\cdot I
+\]
+
+\end_inset
+
+即得结论，其中
+\begin_inset Formula $adjA$
+\end_inset
+
+为A的伴随矩阵。因为即便是域，0也不是单位，所以detA=0的矩阵均不可逆。
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+\begin_inset Formula $n$
+\end_inset
+
+为正整数，则
+\begin_inset Formula $\mathbb{Z}_{n}$
+\end_inset
+
+对于在模n同余类上定义得加法和乘法形成含幺交换环，叫做模n得同余环。由Bezout引理，
+\begin_inset Formula 
+\[
+U\left(\mathbb{Z}_{n}\right)=\left\{ \bar{a}\mid\left(a,n\right)=1\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+故当n为素数是，
+\begin_inset Formula $\mathbb{Z}_{n}$
+\end_inset
+
+是域，而n不是素数时，其不是整环（有零因子）。
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+R是任意环，定义
+\begin_inset Formula $R\left[x\right]$
+\end_inset
+
+为环R上得多项式环。如果R是交换环，那么
+\begin_inset Formula $R\left[x\right]$
+\end_inset
+
+也为交换环。
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+有理数域
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+，实数域
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+，复数域
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+，实四元数体H指的是
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+H=\left\{ a_{0}+a_{1}i+a_{2}k+a_{3}j\mid a_{i}\in\mathbb{R}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+其中
+\begin_inset Formula $i\text{，j，k}$
+\end_inset
+
+满足
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+ri=ir,rj=jr,rk=kr & \text{对\text{于}}r\in\mathbb{R}\\
+i^{2}=j^{2}=k^{2}=-1,ij=-ji,ik=-ki,jk=-kj
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+定义自然加法乘法，则H是含幺非交换环，而设
+\begin_inset Formula $\alpha=a_{0}+a_{1}i+a_{2}k+a_{3}j$
+\end_inset
+
+，定义
+\begin_inset Formula $\bar{\alpha}=a_{0}-a_{1}i-a_{2}k-a_{3}j$
+\end_inset
+
+为其共轭，则
+\begin_inset Formula $\alpha\bar{\alpha}=\sum a_{i}^{2}$
+\end_inset
+
+，容易构造其逆。故H为体。
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+令
+\begin_inset Formula $\mathbb{Q}\left[-1\right]=\left\{ a+b\sqrt{-1}\mid a,b\in\mathbb{Q}\right\} $
+\end_inset
+
+,可以验证
+\begin_inset Formula $\mathbb{Q}\left[-1\right]$
+\end_inset
+
+在通常加法和乘法下是域。类似地可证
+\begin_inset Formula $\mathbb{Z}\left[-1\right]=\left\{ a+b\sqrt{-1}\mid a,b\in\mathbb{\mathbb{Z}}\right\} $
+\end_inset
+
+是含幺交换环，它是整环不是域。
+\end_layout
+
+\begin_layout Definition
+设
+\begin_inset Formula $S$
+\end_inset
+
+是环
+\begin_inset Formula $R$
+\end_inset
+
+的子集合，如果
+\begin_inset Formula $S$
+\end_inset
+
+本身对于环
+\begin_inset Formula $R$
+\end_inset
+
+中的运算也是环，则称
+\begin_inset Formula $S$
+\end_inset
+
+是
+\begin_inset Formula $R$
+\end_inset
+
+的子环，如果
+\begin_inset Formula $S$
+\end_inset
+
+对于
+\begin_inset Formula $R$
+\end_inset
+
+中运算是体或域，则
+\begin_inset Formula $S$
+\end_inset
+
+为
+\begin_inset Formula $R$
+\end_inset
+
+的子体或子域。
+\end_layout
+
+\begin_layout Example
+偶数环2
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+是
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+的子环，而
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+是有理数
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+的子环，
+\begin_inset Formula $M_{n}\left(\mathbb{Q}\right)$
+\end_inset
+
+是
+\begin_inset Formula $M_{n}\left(\mathbb{R}\right)$
+\end_inset
+
+的子环。
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+设
+\begin_inset Formula $S_{i}\left(i\in I\right)$
+\end_inset
+
+均是
+\begin_inset Formula $R$
+\end_inset
+
+的子环，则它们的交
+\begin_inset Formula $∩S_{i}$
+\end_inset
+
+也是
+\begin_inset Formula $R$
+\end_inset
+
+的子环
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+设
+\begin_inset Formula $S$
+\end_inset
+
+是整数环
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+的子环，则
+\begin_inset Formula $S$
+\end_inset
+
+必为
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+的加法子群，则
+\begin_inset Formula $S=n\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+设
+\begin_inset Formula $R$
+\end_inset
+
+和
+\begin_inset Formula $S$
+\end_inset
+
+是环，映射
+\begin_inset Formula $f:R\rightarrow S$
+\end_inset
+
+为环的同态，是指每个
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+,有
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\begin{array}{c}
+f\left(a+b\right)=f\left(a\right)+f\left(b\right)\\
+f\left(ab\right)=f\left(a\right)f\left(b\right)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+如果
+\begin_inset Formula $f$
+\end_inset
+
+是一一对应，则
+\begin_inset Formula $f$
+\end_inset
+
+称为环的同构。环R的全部自同构在映射复合下成群，称为环R的自同构群，记为
+\begin_inset Formula $Aut\left(R\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+映射
+\begin_inset Formula $f:\mathbb{C}\rightarrow H$
+\end_inset
+
+,
+\begin_inset Formula $a+b\sqrt{-1}\mapsto a+bi+0j+0k$
+\end_inset
+
+是环的嵌入，从而
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+也是
+\begin_inset Formula $H$
+\end_inset
+
+的子域，将
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+嵌入到
+\begin_inset Formula $H$
+\end_inset
+
+有无数多种方式。因为满足
+\begin_inset Formula $f\left(i\right)^{2}=f\left(-1\right)=-1$
+\end_inset
+
+在
+\begin_inset Formula $H$
+\end_inset
+
+中有无数多解
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+映射
+\begin_inset Formula $\phi\text{：}\mathbb{Z}\left[x\right]\rightarrow\mathbb{Z}\left[-1\right]$
+\end_inset
+
+,
+\begin_inset Formula $f\left(x\right)\mapsto f\left(-1\right)$
+\end_inset
+
+是环的满同态，但不是单同态，因为在多项式环
+\begin_inset Formula $\mathbb{Z}\left[x\right]$
+\end_inset
+
+中
+\begin_inset Formula $x^{2}+1=0$
+\end_inset
+
+无解。但是
+\begin_inset Formula $\phi\left(x^{2}+1\right)=0=\phi\left(0\right)$
+\end_inset
+
+，另一方面，
+\begin_inset Formula $\mathbb{Z}\left[-1\right]$
+\end_inset
+
+无法嵌入成
+\begin_inset Formula $\mathbb{Z}\left[x\right]$
+\end_inset
+
+的子环，反证法，如果
+\begin_inset Formula $f\text{是嵌入}$
+\end_inset
+
+，
+\begin_inset Formula $f\left(1\right)^{2}=f\left(1\right)$
+\end_inset
+
+,则
+\begin_inset Formula $f\left(1\right)=1$
+\end_inset
+
+，从而
+\begin_inset Formula $f\left(i\right)^{2}=f\left(-1\right)=-1$
+\end_inset
+
+，无解。
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+现在确定一些环或者域的自同构群，设
+\begin_inset Formula $f:\mathbb{Z}\rightarrow\mathbb{Z}$
+\end_inset
+
+为环的自同构，则必然有
+\begin_inset Formula $f\left(0\right)=0,f\left(1\right)=1$
+\end_inset
+
+,从而
+\begin_inset Formula $f\left(-n\right)=-n$
+\end_inset
+
+,从而环
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+只有恒等自同构，其中
+\begin_inset Formula $f\left(1\right)=1$
+\end_inset
+
+是因为
+\begin_inset Formula $f\left(1\right)=f\left(1\right)^{2}$
+\end_inset
+
+，在复数域内均成立，再去推导即可得知，有理数域，实数域的自同构只有一个，而复数域有无穷多个。复数域是因为通过
+\begin_inset Formula $f\left(n\right)=n$
+\end_inset
+
+无法确定所有的结构。
+\end_layout
+
+\begin_layout Subsection
+环的同构定理
+\end_layout
+
+\end_deeper
+\begin_layout Example
+环论中的理想的概念相当于群论中的正规子群，大家知道，正规子群的引入是为了定义商群。首先设S是R的子环，因为对加法R是交换群，所以
+\begin_inset Formula $R/S$
+\end_inset
+
+是商群，于是有下面的引理：
+\end_layout
+
+\begin_layout Lemma
+对于乘法
+\begin_inset Formula $\bar{a}\cdot\bar{b}=\bar{ab}$
+\end_inset
+
+是环，其充要条件是S满足以下条件：对于所以
+\begin_inset Formula $r\in R和a\in S$
+\end_inset
+
+，
+\begin_inset Formula $ra\in S$
+\end_inset
+
+且
+\begin_inset Formula $ar\in S$
+\end_inset
+
+，称满足条件的S为理想
+\end_layout
+
+\begin_layout Proof
+如果对于乘法
+\begin_inset Formula $\bar{a}\cdot\bar{b}=\bar{ab}$
+\end_inset
+
+是环，则
+\begin_inset Formula $r\in R\text{和}a\in S$
+\end_inset
+
+时，
+\begin_inset Formula $\bar{a}=\bar{0}$
+\end_inset
+
+，于是
+\begin_inset Formula $\bar{0}=\bar{0}\cdot\bar{r}=\bar{a}\cdot\bar{r}=\bar{ar}$
+\end_inset
+
+，即
+\begin_inset Formula $ar\in S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+另一方面，可看冯克勤《近世代数引论》P67
+\end_layout
+
+\begin_layout Definition
+设A为理想，则集合
+\begin_inset Formula $R/A$
+\end_inset
+
+为商环。
+\end_layout
+
+\begin_layout Example
+每个非零环R都有两个平凡理想:0和R，只有平凡理想的环叫做单环，不难证明，含幺环R的理想I若含有R中单位，则I=R，由此可知体和域均为单环。
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+我们已经知道，整数环Z的子环均有mZ的形式，它们也是Z的全部理想。
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+设
+\begin_inset Formula $\left\{ A_{i}\mid i\in I\right\} $
+\end_inset
+
+为环R的一些理想，则它们的交
+\begin_inset Formula $∩A_{i}$
+\end_inset
+
+也是R的理想
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+设X是环R的一个子集合，环R中包含X的最小理想称为由集合
+\begin_inset Formula $X$
+\end_inset
+
+生成的理想，并表示成
+\begin_inset Formula $\left(X\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+根据上面的结论，
+\begin_inset Formula $\left(X\right)$
+\end_inset
+
+为包含X的所有理想之交，另一方面，
+\begin_inset Formula $\left(X\right)$
+\end_inset
+
+作为环R的理想显然包含下面的集合：
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+ZX=\left\{ \stackrel[i=1]{n}{\sum}m_{i}x_{i}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+RX=\left\{ \stackrel[i=1]{n}{\sum}r_{i}x_{i}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+XR=\left\{ \stackrel[i=1]{n}{\sum}x_{i}r_{i}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+RXR=\left\{ \stackrel[i=1]{n}{\sum}r_{i}x_{i}r_{i}^{\text{'}}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+容易验证
+\begin_inset Formula 
+\[
+\left(X\right)=ZX+RX+XR+RXR
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+如果R为交换环，则
+\begin_inset Formula 
+\[
+\left(X\right)=ZX+RX
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+如果R是含幺交换环，则
+\begin_inset Formula 
+\[
+\left(X\right)=RX
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+因为
+\begin_inset Formula $1\in R,\text{则}n\in R$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+由一个元素
+\begin_inset Formula $x$
+\end_inset
+
+生成的理想
+\begin_inset Formula $\left(x\right)$
+\end_inset
+
+叫做环R的主理想，如果R是整环，并且所有的理想都是主理想，则称R为主理想整环，记为PID（Principal Ideal Domain）
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+(第一同构定理)
+\end_layout
+
+\begin_layout Theorem
+如果
+\begin_inset Formula $f:R\rightarrow S$
+\end_inset
+
+是环的同态，则Kerf为环R的理想，并且映射
+\begin_inset Formula 
+\[
+\bar{f}:R/Kerf\rightarrow S
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\bar{r}\mapsto f\left(r\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+是环的单同态，特别地我们有同构
+\begin_inset Formula 
+\[
+\bar{f}:R/Kerf\rightarrow Imf
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+首先，我们在群论中已知Kerf是R的加法子群，其次，若
+\begin_inset Formula $r\in R$
+\end_inset
+
+，
+\begin_inset Formula $a\in Kerf$
+\end_inset
+
+，则
+\begin_inset Formula $f\left(ar\right)=f\left(a\right)f\left(r\right)=0$
+\end_inset
+
+，即
+\begin_inset Formula $ra\in Kerf$
+\end_inset
+
+，另外由于
+\begin_inset Formula 
+\[
+\bar{f}\left(\bar{r}\cdot\bar{r^{\prime}}\right)=\bar{f}\left(\bar{rr^{\prime}}\right)=f\left(rr^{\prime}\right)=\bar{f}\left(\bar{r}\right)\bar{f}\left(\bar{r^{\prime}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+即知是环的同态，又一一映射故为同构。
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+设I和J是环R的理想，则
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+I/\left(I∩J\right)\cong\left(I+J\right)/J
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+如果
+\begin_inset Formula $I\subseteq J$
+\end_inset
+
+，则
+\begin_inset Formula 
+\[
+\frac{\left(R/I\right)}{\left(J/I\right)}\cong R/J
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+如下
+\end_layout
+
+\begin_layout Enumerate
+首先，易知I+J是R的子环（实际上是理想，子环只要两个运算封闭即可），J是I+J的理想，作映射
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+f:I\rightarrow\left(I+J\right)/J & r\mapsto r+J\end{array}
+\]
+
+\end_inset
+
+从而
+\begin_inset Formula $f$
+\end_inset
+
+为环同态，又Kerf=
+\begin_inset Formula $\left(I∩J\right)$
+\end_inset
+
+，由同构基本定理得证。
+\end_layout
+
+\begin_layout Enumerate
+构造
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+f:\left(R/I\right)\rightarrow R/J & r+I\mapsto r+J\end{array}
+\]
+
+\end_inset
+
+这是一个满同态，容易验证，由同构基本定理得证。
+\end_layout
+
+\begin_layout Theorem
+理想对应原理：设R为环，
+\begin_inset Formula $K$
+\end_inset
+
+为理想，M为
+\begin_inset Formula $R/K$
+\end_inset
+
+所有理想的集合，
+\begin_inset Formula $N$
+\end_inset
+
+为所有R中含K的理想，则映射
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+f:N\rightarrow M
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+f:J\rightarrow J/K
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+f为同构
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $a\in R$
+\end_inset
+
+,作映射
+\begin_inset Formula 
+\[
+\varphi:R\left[X\right]\rightarrow R
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f\left(x\right)\mapsto f\left(a\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+则
+\begin_inset Formula $\varphi$
+\end_inset
+
+是环的满同态，且Ker
+\begin_inset Formula $\varphi$
+\end_inset
+
+=
+\begin_inset Formula $\left(x-a\right)$
+\end_inset
+
+，表示
+\begin_inset Formula $x-a$
+\end_inset
+
+生成的理想，于是由同构基本定理，有环的同构
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+R\left[X\right]/\left(x-a\right)\cong R
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+设
+\begin_inset Formula $m,n$
+\end_inset
+
+为两个正整数，则
+\begin_inset Formula $mZ,nZ$
+\end_inset
+
+是
+\begin_inset Formula $Z$
+\end_inset
+
+的两个理想，并且
+\begin_inset Formula 
+\[
+mZ∩nZ=\left[m,n\right]Z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+mZ+nZ=\left(m,n\right)Z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+于是由定理2知
+\begin_inset Formula 
+\[
+mZ/\left[m,n\right]Z\cong\left(m,n\right)Z/nZ
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+而两边都是有限环，于是
+\begin_inset Formula $\left[m,n\right]\left(m,n\right)=mn$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+同态的应用
+\end_layout
+
+\end_deeper
+\begin_layout Example
+进一步探究环的性质
+\end_layout
+
+\begin_layout Subsubsection
+环的特征
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+设R为环，如果存在正整数m，使得对每个
+\begin_inset Formula $r\in R$
+\end_inset
+
+，均有
+\begin_inset Formula $mr=0$
+\end_inset
+
+，我们把满足此条件的最小正整数m叫做环R的特征，如果不存在环的特征，便称环的特征为0，记环的特征为
+\begin_inset Formula $charR$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Example
+环Z的特征为0，环
+\begin_inset Formula $Z_{m}$
+\end_inset
+
+的特征为m，不难看出
+\begin_inset Formula $charR=1$
+\end_inset
+
+当且仅当
+\begin_inset Formula $R=\left\{ 0\right\} $
+\end_inset
+
+，于是我们假设
+\begin_inset Formula $charR\neq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+当R为含幺环时，作映射
+\begin_inset Formula 
+\[
+f:Z\rightarrow R
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+n\mapsto n\cdot1_{R}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+则
+\begin_inset Formula $f$
+\end_inset
+
+是环的同态，且
+\begin_inset Formula $Kerf=mZ$
+\end_inset
+
+，其中
+\begin_inset Formula $m=charR$
+\end_inset
+
+，如果
+\begin_inset Formula $char$
+\end_inset
+
+R等于0，则f为环的单同态，于是Z同构于R的子环，如果
+\begin_inset Formula $m\geq2$
+\end_inset
+
+，则存在环的嵌入
+\begin_inset Formula 
+\[
+Z_{\text{m}}\rightarrow P
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+其中
+\begin_inset Formula $P=\left\{ n\cdot1_{R}\mid0\leq n\leq m-1\right\} $
+\end_inset
+
+，P被称为含幺环R的素子环。
+\end_layout
+
+\begin_layout Example
+如果R是整环，则R的特征必为0或者素数。因为如果
+\begin_inset Formula $m\geq2$
+\end_inset
+
+且由两个不同的素因子，则在P中就有零因子（
+\begin_inset Formula $Z_{m}$
+\end_inset
+
+中有零因子）。
+\end_layout
+
+\begin_layout Example
+另一方面，如果R是域且charR=0，则R必包含有理数域
+\begin_inset Formula $Q$
+\end_inset
+
+。如果charR为素数，则包含p元有限域
+\begin_inset Formula $Z_{p}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Theorem
+设R为含幺交换环，charR=p为素s数，则对
+\begin_inset Formula $x,y\in R$
+\end_inset
+
+,有
+\begin_inset Formula $\left(x+y\right)^{p}=x^{p}+y^{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+按照二项式定理应该展开成
+\begin_inset Formula 
+\[
+\left(x+y\right)^{p}=\stackrel[i=1]{n}{\sum}C_{p}^{i}x^{i}y^{p-n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+则由于
+\begin_inset Formula $C_{p}^{i}=\frac{p\text{！}}{i\text{！\left(p-i\right)！}}$
+\end_inset
+
+知道是整除p的，于是中间的全=0，证毕！
+\end_layout
+
+\begin_layout Remark
+于是映射
+\begin_inset Formula 
+\[
+f:R\rightarrow R
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula 
+\[
+r\mapsto r^{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+是环的同态。
+\end_layout
+
+\begin_layout Subsubsection
+整环的商域
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+设D是整环，现在将D嵌入到一个域中，办法与Z嵌入到Q相同，构造
+\begin_inset Formula $D^{*}=D-\left\{ 0\right\} $
+\end_inset
+
+，考虑
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+D\times D^{*}=\left\{ \left(r,s\right)\mid r\in D,s\in D^{*}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+定义等价关系
+\begin_inset Formula $\left(r,s\right)\sim\left(r^{\prime},s^{\prime}\right)\Longleftrightarrow sr^{\prime}=s^{\prime}r$
+\end_inset
+
+,如同构造Q一样构造K，则K是含D最小域。（完全与Z到Q一样，从整环到域），称K为环R的商域。
+\end_layout
+
+\begin_layout Subsubsection
+环的直积
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+设
+\begin_inset Formula $R_{1},R_{2}$
+\end_inset
+
+是两个环，在加法群中定义了直积
+\begin_inset Formula $R_{1}\times R_{2}$
+\end_inset
+
+，现在定义乘法：
+\begin_inset Formula 
+\[
+\left(a,b\right)\cdot\left(c,d\right)=\left(ac,bd\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+则
+\begin_inset Formula $R_{1}\times R_{2}$
+\end_inset
+
+对加法和乘法形成一个环。类似地可以定义任意多个环R的直积。
+\end_layout
+
+\begin_layout Theorem
+（中国剩余定理）
+\end_layout
+
+\begin_layout Theorem
+设R是含幺环，
+\begin_inset Formula $I_{i}$
+\end_inset
+
+是环R的理想，并且当
+\begin_inset Formula $i\neq j$
+\end_inset
+
+时，
+\begin_inset Formula $I_{i}+I_{j}=R$
+\end_inset
+
+，则有环的同构
+\begin_inset Formula $R/\left(I_{1}∩\cdots∩I_{n}\right)\cong\underset{i}{\prod}\left(R/I_{i}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+与熟知的CRT（Chinese Remainder Theorem）相比，这个是整数环Z的推广形式，其中条件
+\begin_inset Formula $I_{i}+I_{j}=R$
+\end_inset
+
+，等价于
+\begin_inset Formula $Z_{m},Z_{n}$
+\end_inset
+
+中，
+\begin_inset Formula $m，n$
+\end_inset
+
+互素。后面的结论等价于环同构
+\begin_inset Formula $Z/m_{1}m_{2}\cdots m_{n}Z\simeq Z/m_{1}Z\times\ldots\times Z/m_{n}Z$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Proof
+作映射
+\begin_inset Formula 
+\[
+f:R\rightarrow\underset{i}{\prod}\left(R/I_{i}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+r\mapsto\left(\bar{r_{1}},\bar{r_{2}},\cdots\bar{r_{n}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+直接验证
+\begin_inset Formula $f$
+\end_inset
+
+是环的同态，现在证明
+\begin_inset Formula $f$
+\end_inset
+
+是满同态。根据定理假设，
+\begin_inset Formula $I_{1}+I_{2}=I_{1}+I_{3}=R$
+\end_inset
+
+，从而
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+R=RR=\left(I_{1}+I_{2}\right)\left(I_{1}+I_{3}\right)\subseteq I_{1}+I_{2}I_{3}\subseteq R
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+于是
+\begin_inset Formula $R=I_{1}+I_{2}I_{3}$
+\end_inset
+
+，归纳得到
+\begin_inset Formula $I_{1}+I_{2}\ldots I_{n}=R$
+\end_inset
+
+，于是有
+\begin_inset Formula $b\in I_{2}\ldots I_{n},a\in I_{1}$
+\end_inset
+
+,使得
+\begin_inset Formula $1=a+b$
+\end_inset
+
+，令
+\begin_inset Formula $r_{1}=1-a=b$
+\end_inset
+
+，则
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+f\left(r_{1}\right)=\left(1,0,\ldots0\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+同样地对任意k，都可以找到
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+f\left(r_{k}\right)=\left(0,0,\ldots1,0\ldots0\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+现在对于
+\begin_inset Formula $\underset{i}{\prod}\left(R/I_{i}\right)$
+\end_inset
+
+中的任意一个元素
+\begin_inset Formula $a=\left(a_{1},a_{2},\cdots a_{n}\right)$
+\end_inset
+
+,令
+\begin_inset Formula $r=\sum a_{i}r_{i}$
+\end_inset
+
+，则表明
+\begin_inset Formula $f$
+\end_inset
+
+是满同态。
+\end_layout
+
+\begin_layout Proof
+然后求Kerf，
+\begin_inset Formula $r\in Kerf\Leftrightarrow r\in\left(I_{1}∩\cdots∩I_{n}\right)$
+\end_inset
+
+，由同态基本定理即得结论。
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $m_{1},m_{2},\cdots m_{n}$
+\end_inset
+
+是两两互素的正整数，则有环同构
+\begin_inset Formula 
+\[
+Z/m_{1}m_{2}\cdots m_{n}Z\simeq Z/m_{1}Z\times\ldots\times Z/m_{n}Z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+从而因为是同构，即一一对应，那么方程组
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\begin{cases}
+\begin{array}{c}
+x\equiv a_{1}\\
+\cdots\\
+x\equiv a_{n}
+\end{array} & \begin{array}{c}
+\begin{array}{cc}
+mod & m_{1}\end{array}\\
+\cdots\\
+\begin{array}{cc}
+mod & m_{n}\end{array}
+\end{array}\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+有整数解。另外一个证明方法是直接给出x的构造。
+\end_layout
+
+\begin_layout Subsubsection
+素理想和极大理想
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+环R的理想P叫做素理想，是指
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\neq R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+对于环R的任意两个理想A和B，如果
+\begin_inset Formula $AB\subseteq P$
+\end_inset
+
+，则
+\begin_inset Formula $A\subseteq P$
+\end_inset
+
+或
+\begin_inset Formula $B\subseteq P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+类似Z中的
+\begin_inset Formula $Z_{p}$
+\end_inset
+
+，对于
+\begin_inset Formula $m,n$
+\end_inset
+
+互素，
+\begin_inset Formula $mZnZ=mnZ$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+设R是含幺交换环,P是R的真理想，则以下三个条件等价
+\end_layout
+
+\begin_layout Enumerate
+P是素理想
+\end_layout
+
+\begin_layout Enumerate
+对于
+\begin_inset Formula $a,b\in R$
+\end_inset
+
+,如果
+\begin_inset Formula $ab\in P$
+\end_inset
+
+，则
+\begin_inset Formula $a\in P$
+\end_inset
+
+或
+\begin_inset Formula $b\in P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R/P$
+\end_inset
+
+为整环
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $1\rightarrow2:$
+\end_inset
+
+如果
+\begin_inset Formula $ab\in P$
+\end_inset
+
+,则
+\begin_inset Formula $\left(ab\right)=abR\subseteq P$
+\end_inset
+
+，而
+\begin_inset Formula $\left(a\right)\left(b\right)\subseteq\left(ab\right)$
+\end_inset
+
+，从而
+\begin_inset Formula $\left(a\right)\subseteq P$
+\end_inset
+
+或
+\begin_inset Formula $\left(b\right)\subseteq P$
+\end_inset
+
+，而R含幺即
+\begin_inset Formula $a\in P$
+\end_inset
+
+或
+\begin_inset Formula $b\in P$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $2\rightarrow3:$
+\end_inset
+
+如果2成立，则
+\begin_inset Formula $\bar{ab}=0\Rightarrow ab\in P\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula $a\in P$
+\end_inset
+
+或
+\begin_inset Formula $b\in P$
+\end_inset
+
+，从而
+\begin_inset Formula $R/P$
+\end_inset
+
+无零因子，即为整环。
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $3\rightarrow1:$
+\end_inset
+
+反证法，如果存在
+\begin_inset Formula $AB\subseteq P\text{，且}A\varsubsetneq P\text{,}B\varsubsetneq P$
+\end_inset
+
+，则存在
+\begin_inset Formula $a\in A,a\in P$
+\end_inset
+
+,
+\begin_inset Formula $b\in B,b\notin P$
+\end_inset
+
+使得
+\begin_inset Formula $ab\in P$
+\end_inset
+
+，从而在
+\begin_inset Formula $R/P$
+\end_inset
+
+中
+\begin_inset Formula $\bar{a}\cdot\bar{b}=0$
+\end_inset
+
+，与3矛盾！
+\end_layout
+
+\begin_layout Remark
+特别地，若R是含幺交换环，则R为整环等价于零理想是素理想
+\end_layout
+
+\begin_layout Definition
+环R中的理想M叫做R的极大理想，是指：
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M\neq R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+对于每个环R的理想N，如果
+\begin_inset Formula $M\subseteq N\subseteq R$
+\end_inset
+
+,则必然
+\begin_inset Formula $N=M$
+\end_inset
+
+或
+\begin_inset Formula $N=R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+设R是含幺交换环，M为R的理想，则M是R的极大理想
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+
+\begin_inset Formula $R/M$
+\end_inset
+
+为域。特别地，若R是含幺交换环，则R为域等价于零理想是极大理想
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+先证明后一个论断，如果R是域，则每个非零元素
+\begin_inset Formula $a$
+\end_inset
+
+都是单位，从而
+\begin_inset Formula $\left(a\right)=aR=R$
+\end_inset
+
+，则R只有两个平凡理想，从而
+\begin_inset Formula $\left(0\right)$
+\end_inset
+
+是极大理想。反之若
+\begin_inset Formula $\left(0\right)$
+\end_inset
+
+为极大理想，则对R中每个元素
+\begin_inset Formula $a\neq0$
+\end_inset
+
+，
+\begin_inset Formula $\left(a\right)=aR\neq\left(0\right)$
+\end_inset
+
+，则
+\begin_inset Formula $aR=R$
+\end_inset
+
+，于是存在
+\begin_inset Formula $b$
+\end_inset
+
+，使得
+\begin_inset Formula $ab=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+对于任意的含幺交换环R，根据上节定理，可知：则M是R的极大理想
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+
+\begin_inset Formula $R/M$
+\end_inset
+
+为域
+\end_layout
+
+\begin_layout Remark
+极大理想必为素理想。由Zorn引理，所有含幺交换环R均有极大理想，从而必然有素理想。
+\end_layout
+
+\begin_layout Example
+以整数环Z为例，
+\begin_inset Formula $Z_{p}$
+\end_inset
+
+是域，于是
+\begin_inset Formula $pZ$
+\end_inset
+
+是Z所有极大理想，也是所有素理想。
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+设
+\begin_inset Formula $R=Z\left[x\right]$
+\end_inset
+
+，作映射
+\begin_inset Formula 
+\[
+\varphi:Z\left[x\right]\rightarrow Z
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+g\left(x\right)\mapsto g\left(0\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这是环的满同态，并且
+\begin_inset Formula $Ker\varphi=\left(x\right)$
+\end_inset
+
+因此
+\begin_inset Formula $Z\left[x\right]/\left(x\right)\cong Z$
+\end_inset
+
+是整环，从而
+\begin_inset Formula $\left(x\right)$
+\end_inset
+
+是
+\begin_inset Formula $Z\left[x\right]$
+\end_inset
+
+的素理想，但Z不是域，所有不是极大理想。而取映射
+\begin_inset Formula $g\left(x\right)\mapsto g\left(0\right)mod2$
+\end_inset
+
+，
+\begin_inset Formula $Z\left[x\right]/\left(x,2\right)\cong Z/2Z$
+\end_inset
+
+为域，所以
+\begin_inset Formula $\left(x,2\right)$
+\end_inset
+
+是
+\begin_inset Formula $Z\left[x\right]$
+\end_inset
+
+的极大理想。
+\end_layout
+
+\begin_layout Subsection
+交换环中的因子分解
+\end_layout
+
+\end_deeper
+\begin_layout Example
+从代数上看，初等数论是研究整数环Z的学科，从整除性开始，衍生出一系列概念：因子和倍数，公因子和公倍数，最大公因子和最小公倍数，欧拉算法，Bezout原理，最后到
+算术基本定理，本节将这些概念推广到更基本的交换环上。
+\end_layout
+
+\begin_layout Definition
+设R为交换环，
+\begin_inset Formula $a,b\in R,a\neq0,$
+\end_inset
+
+如果存在
+\begin_inset Formula $x\in R$
+\end_inset
+
+有
+\begin_inset Formula $ax=b$
+\end_inset
+
+，则称
+\begin_inset Formula $a$
+\end_inset
+
+整除
+\begin_inset Formula $b$
+\end_inset
+
+，
+\begin_inset Formula $a$
+\end_inset
+
+为
+\begin_inset Formula $b$
+\end_inset
+
+的一个因子，记号与初等数论相同。如果
+\begin_inset Formula $a\mid b$
+\end_inset
+
+和
+\begin_inset Formula $b\mid a$
+\end_inset
+
+同时发生，则称
+\begin_inset Formula $a\text{，b}$
+\end_inset
+
+相伴，记为
+\begin_inset Formula $a\sim b$
+\end_inset
+
+。因为R不一定与Z同构，所以这里是体现差别的地方。若R为含幺交换环，且
+\begin_inset Formula $a=bc$
+\end_inset
+
+，并且
+\begin_inset Formula $b\text{，c}$
+\end_inset
+
+均不是R中单位，则称
+\begin_inset Formula $b\text{和}c$
+\end_inset
+
+均为
+\begin_inset Formula $a$
+\end_inset
+
+的真因子。在Z中，仅有
+\begin_inset Formula $\pm1$
+\end_inset
+
+为单位，
+\begin_inset Formula $b=a$
+\end_inset
+
+会导致另外一个因子为c=1，故除了1，
+\begin_inset Formula $a$
+\end_inset
+
+其余均为真因子。
+\end_layout
+
+\begin_layout Theorem
+设R为含幺交换环，
+\begin_inset Formula $a,b\in R-\left\{ 0\right\} ,U\left(R\right)$
+\end_inset
+
+为R的单位群，则
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a\mid b\Leftrightarrow\text{\left(b\right)}\subseteq\left(a\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a\sim b\Leftrightarrow\text{\left(b\right)}=\left(a\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $u\in U\left(R\right)\Leftrightarrow u\sim1\Leftrightarrow\left(u\right)=R\Leftrightarrow u\mid r,\forall r\in R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $a=bu\text{，u\in U\left(R\right)}\Rightarrow a\sim b$
+\end_inset
+
+,若R为整环，则反过来也成立
+\end_layout
+
+\begin_layout Enumerate
+若R为整环，则：
+\begin_inset Formula $a$
+\end_inset
+
+为
+\begin_inset Formula $b$
+\end_inset
+
+真因子
+\begin_inset Formula $\Leftrightarrow\text{\left(b\right)}\subseteq\left(a\right)\text{但}\text{\left(b\right)}\neq\left(a\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+如下：
+\end_layout
+
+\begin_layout Proof
+1.
+ 设
+\begin_inset Formula $ax=b$
+\end_inset
+
+，则
+\begin_inset Formula $\left(b\right)=axR\subseteq aR=\left(a\right)$
+\end_inset
+
+，另一方面如果
+\begin_inset Formula $\text{\left(b\right)}\subseteq\left(a\right)$
+\end_inset
+
+，即
+\begin_inset Formula $bR\subseteq aR$
+\end_inset
+
+，于是存在
+\begin_inset Formula $ax=b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+2.
+ 由1显然
+\end_layout
+
+\begin_layout Proof
+3.
+ 
+\begin_inset Formula $u=1\cdot u$
+\end_inset
+
+，且
+\begin_inset Formula $1=u\cdot u^{-1}$
+\end_inset
+
+,知
+\begin_inset Formula $u\sim1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+4.
+ 
+\begin_inset Formula $b=a\cdot u^{-1}$
+\end_inset
+
+,如果R为整环，则无零因子，有消去律（因为有结合律），
+\begin_inset Formula $a=bu=apu$
+\end_inset
+
+，则
+\begin_inset Formula $pu=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+5.
+ 由1，2显然
+\end_layout
+
+\begin_layout Remark
+若R为含幺交换环，则相伴关系
+\begin_inset Formula $\sim$
+\end_inset
+
+是
+\begin_inset Formula $R-\left\{ 0\right\} $
+\end_inset
+
+上得等价关系，于是可以将
+\begin_inset Formula $R-\left\{ 0\right\} $
+\end_inset
+
+分成若干个等价类，如果R为整环，则由定理8得4知道同一个等价类中元素相差了一个单位，于是每个等价类有这个形式
+\begin_inset Formula $aU\left(R\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Remark
+对于整数环Z，由于
+\begin_inset Formula $U\left(Z\right)=\pm1$
+\end_inset
+
+，所以如果限定研究正整数n，我们可以不谈相伴得概念，但如果一般的含幺交换环R，
+\begin_inset Formula $U\left(R\right)$
+\end_inset
+
+可能很大，所以必须要讨论。
+\end_layout
+
+\begin_layout Standard
+在含幺交换环R中，每个元素
+\begin_inset Formula $a\neq0$
+\end_inset
+
+都有一些平凡因子
+\begin_inset Formula $aU\left(R\right)$
+\end_inset
+
+，剩下的均为真因子，在Z中，不具有真因子的自然数称为素数，我们也可以将这个概念推广。
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+含幺交换环R中元素
+\begin_inset Formula $a\neq0$
+\end_inset
+
+叫做不可约元，是指
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a\notin U\left(R\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a$
+\end_inset
+
+没有真因子
+\end_layout
+
+\begin_layout Definition
+p称为素元，是指
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p\notin U\left(R\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a,b\in R,\text{若}p\mid ab$
+\end_inset
+
+,则
+\begin_inset Formula $p\mid a$
+\end_inset
+
+或
+\begin_inset Formula $p\mid b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于整数环Z，上述不可约元和素元的定义是等价的，但对于一般的含幺交换环，这是不同的。在整数环Z中我们按照定义16来定义素数，则对于17，在Z中是有大小关系的，
+\begin_inset Formula $\text{若}p\mid ab$
+\end_inset
+
+，反证法，
+\begin_inset Formula $p\mid a_{1}b_{1}$
+\end_inset
+
+，其中
+\begin_inset Formula $a_{1},b_{1}$
+\end_inset
+
+均不等于1，且分别为
+\begin_inset Formula $a\text{，b}$
+\end_inset
+
+因子，如果一个等于1，则
+\begin_inset Formula $p\mid a$
+\end_inset
+
+或
+\begin_inset Formula $p\mid b$
+\end_inset
+
+，一直有
+\begin_inset Formula $a_{n},b_{n}$
+\end_inset
+
+,因为会一直变小，所有总有正整数
+\begin_inset Formula $k$
+\end_inset
+
+使得
+\begin_inset Formula $p=a_{k}b_{k}$
+\end_inset
+
+,由定义16，必然有一个为1，于是矛盾！这个证明无法推广到一般含幺交换环上，因为一般含幺交换环无法定序。
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $R=Z_{6}$
+\end_inset
+
+，则
+\begin_inset Formula $2$
+\end_inset
+
+是素元但不是不可约元，因为4是2的真因子。
+\end_layout
+
+\begin_deeper
+\begin_layout Example
+\begin_inset Formula $R=Z\left[\sqrt{-5}\right]=\left\{ a+b\sqrt{-5}\mid a,b\in Z\right\} $
+\end_inset
+
+,其中3是不可约元，但3不是素元，因为
+\begin_inset Formula $3\mid9=\left(2+\sqrt{-5}\right)\left(2-\sqrt{-5}\right)$
+\end_inset
+
+，且在R中
+\begin_inset Formula $3\nmid\left(2\pm\sqrt{-5}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+然而，下面的定理表明，如果R是整环，则素元必是不可约元，如果R是主理想整环（当然包括Z），则反过来也对。
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+设R为整环，
+\begin_inset Formula $p,c\in R-\left\{ 0\right\} $
+\end_inset
+
+,以S表示R的全部非平凡主理想组成的集合，即
+\begin_inset Formula $S=\left\{ \left(a\right)\mid a\in R,a\neq0,a\notin U\left(R\right)\right\} $
+\end_inset
+
+则
+\end_layout
+
+\begin_layout Enumerate
+p为素元
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+
+\begin_inset Formula $\left(p\right)$
+\end_inset
+
+为非零素理想
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $c$
+\end_inset
+
+为不可约元
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+主理想
+\begin_inset Formula $\left(c\right)$
+\end_inset
+
+为集合S中的极大元
+\end_layout
+
+\begin_layout Enumerate
+R中素元必是不可约元
+\end_layout
+
+\begin_layout Enumerate
+若R为主理想整环，则不可约元必是素元。
+\end_layout
+
+\begin_layout Proof
+如下
+\end_layout
+
+\begin_layout Proof
+1.注意到
+\begin_inset Formula $p\mid a\Leftrightarrow a\in pR=\left(p\right),$
+\end_inset
+
+于是若p为素元，则任意
+\begin_inset Formula $ab\in\left(p\right)$
+\end_inset
+
+,有
+\begin_inset Formula $a\in\left(p\right)$
+\end_inset
+
+或
+\begin_inset Formula $b\in\left(p\right)$
+\end_inset
+
+,即
+\begin_inset Formula $\left(p\right)$
+\end_inset
+
+为素理想。反之也成立。
+\end_layout
+
+\begin_layout Proof
+2.
+ 略，详见教材
+\end_layout
+
+\begin_layout Proof
+3.若p为素元，且
+\begin_inset Formula $p=ab$
+\end_inset
+
+，则
+\begin_inset Formula $p\mid a$
+\end_inset
+
+，或
+\begin_inset Formula $p\mid b$
+\end_inset
+
+，如果
+\begin_inset Formula $p\mid a$
+\end_inset
+
+，设
+\begin_inset Formula $px=a$
+\end_inset
+
+，不妨设
+\begin_inset Formula $p,x$
+\end_inset
+
+均不为单位，从而
+\begin_inset Formula $abx=px=a$
+\end_inset
+
+，由于R为整环，故
+\begin_inset Formula $bx=1$
+\end_inset
+
+，因此b是单位，从而p为R中不可约元。
+\end_layout
+
+\begin_layout Proof
+4.设p为不可约元，设
+\begin_inset Formula $p\mid ab$
+\end_inset
+
+，但
+\begin_inset Formula $p\nmid a$
+\end_inset
+
+且
+\begin_inset Formula $p\nmid b$
+\end_inset
+
+，即考虑由p和a生成的理想，则它是主理想
+\begin_inset Formula $\left(d\right)$
+\end_inset
+
+，因为
+\begin_inset Formula $\left(p\right)\subseteq\left(d\right)$
+\end_inset
+
+，所以
+\begin_inset Formula $d\mid p$
+\end_inset
+
+，则由于p不可约，于是
+\begin_inset Formula $p\sim d$
+\end_inset
+
+，或者
+\begin_inset Formula $d$
+\end_inset
+
+是单位，但由于
+\begin_inset Formula $\left(a\right)\subseteq\left(d\right)$
+\end_inset
+
+，且
+\begin_inset Formula $p\nmid a$
+\end_inset
+
+，故d为单位，则
+\begin_inset Formula $\left(d\right)=R$
+\end_inset
+
+，于是存在
+\begin_inset Formula $s,t$
+\end_inset
+
+使得
+\begin_inset Formula $1=ps+at$
+\end_inset
+
+，于是
+\begin_inset Formula $b=psb+abt$
+\end_inset
+
+，
+\begin_inset Formula $p\mid b$
+\end_inset
+
+，即p是素元。
+\end_layout
+
+\begin_layout Remark
+Bezout定理也可这么证明，前提是知道Z是主理想整环，这是当然的，因为Z的所有子理想都是mZ。于是考虑
+\begin_inset Formula $p,q$
+\end_inset
+
+互素，其生成的主理想为
+\begin_inset Formula $\left(d\right)$
+\end_inset
+
+，由于
+\begin_inset Formula $d\mid p$
+\end_inset
+
+，且
+\begin_inset Formula $d\mid q$
+\end_inset
+
+则d为p，q公因子，于是d=1，从而其生成的只能是主理想，于是存在
+\begin_inset Formula $s,t$
+\end_inset
+
+使得
+\begin_inset Formula $1=ps+qt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+现在可以阐述唯一分解定理了
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+整环R称为唯一因子分解整环（UFD）指的是
+\end_layout
+
+\begin_layout Enumerate
+（分解的存在性）：对任意R中元素
+\begin_inset Formula $a$
+\end_inset
+
+有分解
+\begin_inset Formula $a=c_{1}\ldots c_{n}$
+\end_inset
+
+,其中
+\begin_inset Formula $c_{i}$
+\end_inset
+
+为不可约元
+\end_layout
+
+\begin_layout Enumerate
+（分解的唯一性）：上述分解在顺序可交换情况下唯一
+\end_layout
+
+\begin_layout Example
+考虑Z上“分指数”多项式集合
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+R=\left\{ a_{1}x^{i_{1}}+\ldots+a_{n}x^{i_{n}}\mid i_{1},\cdots i_{n}\geq0,a_{i}\in Z,n\geq1\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+易知R对于自然定义的加法和乘法是整环，并且
+\begin_inset Formula $U\left(R\right)=U\left(Z\right)=\left\{ \pm1\right\} $
+\end_inset
+
+，考察元素
+\begin_inset Formula $x$
+\end_inset
+
+，如果
+\begin_inset Formula $x$
+\end_inset
+
+写成R中有限个元素的乘积，不难证明每个真因子都是单项式
+\begin_inset Formula $x^{t}$
+\end_inset
+
+，但它们都不是R中不可约元
+\begin_inset Formula $\left(x^{t}=x^{t/2}\cdot x^{t/2}\right)$
+\end_inset
+
+,从而x在R中无法表示成有限个不可约元的乘积。
+\end_layout
+
+\begin_layout Standard
+构造上，除了Z外，现阶段无法从定义得到简便的UFD的例子，反例可以构造，我们希望研究UFD本身的性质，并希望给出刻画UFD的其它方法。
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+若R为UFD，则R具有下面两个彼此等价的性质
+\end_layout
+
+\begin_layout Enumerate
+R中不存在无限的元素序列
+\begin_inset Formula $a_{1},a_{2},\cdots a_{n}\cdots$
+\end_inset
+
+使得每个
+\begin_inset Formula $a_{i+1}$
+\end_inset
+
+都是
+\begin_inset Formula $a_{i}$
+\end_inset
+
+的真因子
+\end_layout
+
+\begin_layout Enumerate
+对于R中每个无限的元素序列
+\begin_inset Formula $a_{1},a_{2},\cdots a_{n}\cdots$
+\end_inset
+
+，如果
+\begin_inset Formula $a_{i+1}\mid a_{i}$
+\end_inset
+
+，则存在N，任意
+\begin_inset Formula $k>N$
+\end_inset
+
+,都有
+\begin_inset Formula $a_{k+1}\sim a_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+R中的不可约元必为素元
+\end_layout
+
+\begin_layout Proof
+1和2是显然等价的，先证明1：
+\end_layout
+
+\begin_layout Proof
+设
+\begin_inset Formula $a_{1}=q_{1}q_{2}\ldots q_{n}$
+\end_inset
+
+,设
+\begin_inset Formula $a_{2}$
+\end_inset
+
+为
+\begin_inset Formula $a_{1}$
+\end_inset
+
+的真因子，则由分解唯一性，不可约因子会越来越少，而无法重复下去。
+\end_layout
+
+\begin_layout Proof
+对于3：设
+\begin_inset Formula $p$
+\end_inset
+
+为R中不可约元，如果
+\begin_inset Formula $p\mid ab$
+\end_inset
+
+，则
+\begin_inset Formula $pc=ab$
+\end_inset
+
+，将
+\begin_inset Formula $c,a,b$
+\end_inset
+
+写成不可约元的积
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\begin{cases}
+\begin{array}{c}
+a=q_{1}\cdots q_{n}\\
+b=p_{1}\cdots p_{n}\\
+r=r_{1}\cdots r_{n}
+\end{array}\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+即
+\begin_inset Formula 
+\[
+q_{1}\cdots q_{n}p_{1}\cdots p_{n}=pr_{1}\cdots r_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+由分解的唯一性和p不可约，p一定与某个
+\begin_inset Formula $p_{i}$
+\end_inset
+
+或者
+\begin_inset Formula $q_{i}$
+\end_inset
+
+相伴，即
+\begin_inset Formula $p\mid a$
+\end_inset
+
+，或
+\begin_inset Formula $p\mid b$
+\end_inset
+
+从而p为素元。
+\end_layout
+
+\begin_layout Definition
+设R是整环，
+\begin_inset Formula $a,b\in R-\left\{ 0\right\} $
+\end_inset
+
+,元素d叫做是
+\begin_inset Formula $a,b$
+\end_inset
+
+的最大公因子记为
+\begin_inset Formula $\text{\left(a,b\right)}$
+\end_inset
+
+是指
+\end_layout
+
+\begin_layout Enumerate
+d是
+\begin_inset Formula $a,b$
+\end_inset
+
+的公因子，即
+\begin_inset Formula $d\mid a\text{，且}d\mid b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $k$
+\end_inset
+
+也是
+\begin_inset Formula $a\text{，b}$
+\end_inset
+
+的公因子，那么
+\begin_inset Formula $k\mid d$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+最大公因子若存在则不是唯一的，与
+\begin_inset Formula $d=\left(a,b\right)$
+\end_inset
+
+的相伴的所有元素都是最大公因子，若
+\begin_inset Formula $\left(a,b\right)\sim1$
+\end_inset
+
+,称
+\begin_inset Formula $a,b$
+\end_inset
+
+互素，类似地可以写出最小公倍元。
+\end_layout
+
+\begin_layout Lemma
+设R为整环，
+\begin_inset Formula $a,b,c\in R-\left\{ 0\right\} $
+\end_inset
+
+，则
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $c\left(a,b\right)\sim\left(ca,cb\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(a,b\right)\sim1$
+\end_inset
+
+，
+\begin_inset Formula $\left(a,c\right)\sim1$
+\end_inset
+
+，则
+\begin_inset Formula $\left(a,bc\right)\sim1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+详见教材P85
+\end_layout
+
+\begin_layout Standard
+对于整环，两个非零元素不一定有最大公因子，例如
+\begin_inset Formula $R=Z\left[\sqrt{-5}\right]$
+\end_inset
+
+中的
+\begin_inset Formula $6$
+\end_inset
+
+和
+\begin_inset Formula $2\left(1+\sqrt{5}\right)$
+\end_inset
+
+就没有（考虑两个公因子2和
+\begin_inset Formula $\left(1+\sqrt{5}\right)$
+\end_inset
+
+），但对于UFD有
+\end_layout
+
+\begin_layout Theorem
+（性质4）设R为UFD，则R中任意两个非零元素均有最大公因子
+\end_layout
+
+\begin_layout Proof
+详见教材P85，与数论中相同
+\end_layout
+
+\begin_layout Standard
+同样地也可以证明存在最小公倍元，下面地定理表明这些性质也可以用来刻画UFD
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+设R为整环，则下面三个条件等价
+\end_layout
+
+\begin_layout Enumerate
+R为UFD
+\end_layout
+
+\begin_layout Enumerate
+R满足性质1和4
+\end_layout
+
+\begin_layout Enumerate
+R满足性质1和3
+\end_layout
+
+\begin_layout Proof
+对于2
+\end_layout
+
+\begin_layout Standard
+现在可以给出更多UFD地例子
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+PID均为UFD
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\end_body
+\end_document
