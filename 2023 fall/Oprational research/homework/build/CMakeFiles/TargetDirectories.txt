@@ -1,0 +1,2 @@
+D:/STudy/the first semester of junior/Oprational research/homework/build/CMakeFiles/edit_cache.dir
+D:/STudy/the first semester of junior/Oprational research/homework/build/CMakeFiles/rebuild_cache.dir

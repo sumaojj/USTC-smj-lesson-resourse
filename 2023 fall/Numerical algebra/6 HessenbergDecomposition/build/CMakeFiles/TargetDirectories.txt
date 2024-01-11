@@ -1,0 +1,3 @@
+D:/STudy/the first semester of junior/Numerical algebra/my homework6/build/CMakeFiles/myhomework6.dir
+D:/STudy/the first semester of junior/Numerical algebra/my homework6/build/CMakeFiles/edit_cache.dir
+D:/STudy/the first semester of junior/Numerical algebra/my homework6/build/CMakeFiles/rebuild_cache.dir

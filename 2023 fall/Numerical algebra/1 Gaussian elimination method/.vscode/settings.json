@@ -1,0 +1,5 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "C_Cpp.intelliSenseEngineFallback": "enabled",
+    "C_Cpp.default.compilerPath": "C:\\Program Files\\mingw\\mingw64\\bin\\g++.exe"
+}

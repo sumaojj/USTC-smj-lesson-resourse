@@ -1,0 +1,538 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\begin_preamble
+\DeclareRobustCommand\nobreakspace{\leavevmode\nobreak\ }
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-named
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package none
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a3paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+运筹学project1测试报告
+\end_layout
+
+\begin_layout Author
+苏茂江 PB21000340
+\end_layout
+
+\begin_layout Date
+2023.12.18
+\end_layout
+
+\begin_layout Section
+问题介绍
+\end_layout
+
+\begin_layout Standard
+用C++编写单纯型法通用子程序，并求解线性规划标准问题。
+\end_layout
+
+\begin_layout Section
+算法原理
+\end_layout
+
+\begin_layout Standard
+单纯形法的原理参考课程讲义《Lecture 4: 单纯形法和对偶理论》，主要包含大M法，最优判定和转轴运算。
+\end_layout
+
+\begin_layout Section
+编译环境及使用方法
+\end_layout
+
+\begin_layout Subsection
+编译环境
+\end_layout
+
+\begin_layout Standard
+编译环境本人采用的是Vscode，编译器为g++（Mingw）。
+\end_layout
+
+\begin_layout Standard
+而project1.1中文件.vscode中task.json为vscode自动生成的编译文件，eigen-3.4.0为eigen第三方库。
+\end_layout
+
+\begin_layout Standard
+剩余的.cpp和.h文件是主要代码，.exe文件是vscode生成的可执行文件，如果运行报错，请删除.exe文件再试一次。
+\end_layout
+
+\begin_layout Subsection
+使用方法
+\end_layout
+
+\begin_layout Standard
+project1.1.cpp是主要测试文件，主要函数的定义和声明都在function1.1.h里面，randomtest.cpp是用来随机生成测试案例，报告求解时间随着问
+题规模的变化图像，blandtest.cpp用来测试bland's rule。
+\end_layout
+
+\begin_layout Standard
+本程序没有做模块0，所以需要手动补充冗余变量，使得问题化为线性规划标准型
+\begin_inset Formula 
+\[
+\left\{ \min c^{T}x\mid Ax=b,x\geq0\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+具体方法见各教科书。
+\end_layout
+
+\begin_layout Standard
+由于数据结构是eigen库，于是对初始化进行说明。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-18 205912.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如图，上图是主要程序示例，在手动转换的到线性规划标准型问题的
+\begin_inset Formula $A,b,c$
+\end_inset
+
+之后，修改相应的81-89行即可，前面80行的注释是我测试的时候用的。
+\end_layout
+
+\begin_layout Standard
+重点在于linear_program_data p{A, b, c, 2};最后一个数字代表初始的c的行数，也就是初始变量个数（在化为标准型以后），因为后面大M
+法会修改A，b所以在这里对n进行说明。
+\end_layout
+
+\begin_layout Subsection
+各模块详解
+\end_layout
+
+\begin_layout Subsubsection
+模块1
+\end_layout
+
+\begin_layout Standard
+模块一由函数void delete_duplicate_rows(linear_program_data &p)实现，位置在function1.1.h的25-77行
+。
+\end_layout
+
+\begin_layout Standard
+实现的方法是PPT中的方法2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-18 211357.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在代码中，实现QR分解引用了eigen库来实现，其余步骤说明见function1.1.h的25-77行的注释。注意在代码中还检查了A和增广矩阵Ab的秩，初步判断问题
+解的情况。
+\end_layout
+
+\begin_layout Subsubsection
+模块2
+\end_layout
+
+\begin_layout Standard
+模块2中大M法实现初始化可行基解由函数void ini_bigM(linear_program_data &p)实现，位置在function1.1.h的80-118
+行。大M法的M设置为固定的100000。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-18 212240.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在代码中，新的问题会修改初始的A要注意，其余步骤说明见function1.1.h的25-77行的注释。
+\end_layout
+
+\begin_layout Subsubsection
+模块3
+\end_layout
+
+\begin_layout Standard
+模块3实现单纯形法的迭代，主要参考资料如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-18 212828.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+最优判定由函数bool optimal_decision(linear_program_data &p)实现，见function1.1.h的120-162行。
+\end_layout
+
+\begin_layout Standard
+转轴运算由函数void Axis_operation(linear_program_data &p)实现，见function1.1.h的164-207行。
+\end_layout
+
+\begin_layout Standard
+其余步骤说明见function1.1.h的120-207行的注释。
+\end_layout
+
+\begin_layout Section
+数据集说明
+\end_layout
+
+\begin_layout Standard
+本次测试采用两个数据集，一个是助教发的《线性规划测试集》，另一个是老师PPT《实验1、2要求》中5个测试案例，
+\end_layout
+
+\begin_layout Section
+测试结果
+\end_layout
+
+\begin_layout Standard
+以下实验均在代码中用注释形式保留（如需测试记得修改初始n）
+\end_layout
+
+\begin_layout Subsection
+《线性规划测试集》
+\end_layout
+
+\begin_layout Standard
+测试结果一致，因不做要求故未在此展示。
+\end_layout
+
+\begin_layout Subsection
+《实验1、2要求》
+\end_layout
+
+\begin_layout Subsubsection
+有解
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/图片6.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+结果为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-18 144101.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+有冗余秩
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/图片2.png
+	lyxscale 80
+	scale 82
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+结果为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-18 150130.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+注意到上面的矩阵是模块1和模块2工作过后的新矩阵A，可见两模块均完成工作。
+\end_layout
+
+\begin_layout Subsubsection
+无可行域
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/图片3.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+结果为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-18 150606.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+注意到上面的矩阵是模块1和模块2工作过后的新矩阵A，可见两模块均完成工作。
+\end_layout
+
+\begin_layout Subsubsection
+无界
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/图片4.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+结果为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-18 150848.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+注意到上面的矩阵是模块1和模块2工作过后的新矩阵A，可见两模块均完成工作。
+\end_layout
+
+\begin_layout Subsubsection
+Bland’s rule
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/图片5.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+跟踪单纯形法迭代的结果：输出为每次转轴运算的下标B
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-18 232043.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+最后跳出了while循环，详细代码见
+\end_layout
+
+\begin_layout Subsection
+关于随机测试结果
+\end_layout
+
+\begin_layout Standard
+在randomtest.cpp内测试随机矩阵结果，注意到40阶，50阶因为随机生成很多为无解，所以选取20次成功成果进行输入。最后得到的平均时间和标准差。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-18 185428.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+作图为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/图片1.png
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+横坐标为n，纵坐标为时间（s）。
+\end_layout
+
+\begin_layout Section
+分析与总结
+\end_layout
+
+\begin_layout Standard
+单纯形法子程序所有测试集均测试通过，且其中各模块也验证正常工作，包括采用Bland’s rule避免退化解循环。
+\end_layout
+
+\begin_layout Standard
+在时间的复杂测试度上，发现随阶数n提高，耗时增长很快，标准差也比较大。
+\end_layout
+
+\begin_layout Section
+Code
+\end_layout
+
+\begin_layout Standard
+代码见文件
+\end_layout
+
+\end_body
+\end_document

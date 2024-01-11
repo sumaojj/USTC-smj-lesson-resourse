@@ -1,0 +1,499 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\begin_preamble
+\DeclareRobustCommand\nobreakspace{\leavevmode\nobreak\ }
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-named
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package none
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a3paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+运筹学project2测试报告
+\end_layout
+
+\begin_layout Author
+苏茂江 PB21000340
+\end_layout
+
+\begin_layout Date
+2023.12.18
+\end_layout
+
+\begin_layout Section
+问题介绍
+\end_layout
+
+\begin_layout Standard
+用C++编写Dijkstra算法求解最短路问题的通用子程序，并求解最短路问题。
+\end_layout
+
+\begin_layout Section
+算法原理
+\end_layout
+
+\begin_layout Standard
+单纯形法的原理参考课程讲义《Lecture_06_最短路和最大流》，主要是Dijkstra算法。
+\end_layout
+
+\begin_layout Section
+编译环境及使用方法
+\end_layout
+
+\begin_layout Subsection
+编译环境
+\end_layout
+
+\begin_layout Standard
+编译环境本人采用的是Vscode，编译器为g++（Mingw）。
+\end_layout
+
+\begin_layout Standard
+而project2中文件.vscode中task.json为vscode自动生成的编译文件，eigen-3.4.0为eigen第三方库。
+\end_layout
+
+\begin_layout Standard
+剩余的.cpp和.h文件是主要代码，.exe文件是vscode生成的可执行文件，如果运行报错，请删除.exe文件再试一次。
+\end_layout
+
+\begin_layout Subsection
+使用方法
+\end_layout
+
+\begin_layout Standard
+project2.cpp是主要测试文件，主要函数的定义和声明都在function2.h里面，testtimewithn.cpp是用来随机生成测试案例，测试Dijkst
+ra算法时间与阶数关系。而comparisiontest.cpp引用function2.h来求解标准LP问题，对比两种求解方法的效率。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-26 213901.png
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+G输入是系数矩阵，第一个点固定为起始点，填充规则是
+\begin_inset Formula $g(i,j)$
+\end_inset
+
+对应的是从点
+\begin_inset Formula $i$
+\end_inset
+
+到点
+\begin_inset Formula $j$
+\end_inset
+
+的距离长度，如果两点之间无连接，那么则为INF(infinity),定义为C++整型的最大值。输入后即可得到结果。五个测试案例均以注释形式给出。
+\end_layout
+
+\begin_layout Standard
+输出的结果是起始点到其余点的最小距离。
+\end_layout
+
+\begin_layout Subsection
+各模块详解
+\end_layout
+
+\begin_layout Subsubsection
+判断图是否连通，是否有负权重边
+\end_layout
+
+\begin_layout Standard
+由函数checkifconnectedgraph(MatrixXd &G)实现，位置在function2.h的54-90行。
+\end_layout
+
+\begin_layout Standard
+实现的方法是先判断是否有负权重边，令一个是判断图是否连通。
+\end_layout
+
+\begin_layout Subsubsection
+Dijkstra算法
+\end_layout
+
+\begin_layout Standard
+Dijkstra算法由project2.cpp第73-77行实现，采用的是下图中的详细算法。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-26 225207.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中固定最短路由函数Fixed_Shortest_Circuit(VectorXd &d, std::vector<int> &P)实现，位置在function
+2.h的92-115行。
+\end_layout
+
+\begin_layout Standard
+更新部分由函数update(MatrixXd &G, VectorXd &d, std::vector<int> &P)实现，位置在function2.h的117
+-137行。
+\end_layout
+
+\begin_layout Section
+数据集说明
+\end_layout
+
+\begin_layout Standard
+本次测试采用的数据集是自己构造的，还有一道作业题。
+\end_layout
+
+\begin_layout Section
+测试结果
+\end_layout
+
+\begin_layout Standard
+以下实验均在代码中用注释形式保留
+\end_layout
+
+\begin_layout Subsection
+测试案例
+\end_layout
+
+\begin_layout Subsubsection
+连通图1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-26 225630.png
+	lyxscale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+结果为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-25 224031.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+有有负权重边
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-26 225827.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+结果为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-25 224039.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+非连通图
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-26 230011.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+结果为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-25 224238.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+连通图2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-26 230652.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+结果为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-25 225610.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+注意到上面的矩阵是模块1和模块2工作过后的新矩阵A，可见两模块均完成工作。
+\end_layout
+
+\begin_layout Subsubsection
+连通图3
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-26 231215.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是作业题，答案与预期符合。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-25 230135.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+关于求解时间测试结果
+\end_layout
+
+\begin_layout Subsubsection
+Dijkstra算法时间与阶数关系
+\end_layout
+
+\begin_layout Standard
+在testtimewithn.cpp内测试随机系数矩阵结果，采取随机生成系数矩阵，如果没得到连通图就不计时间，和project1的LP求解函数比较。
+\end_layout
+
+\begin_layout Standard
+Dijkstra算法原始求解时间数据为(单位为s)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-27 110006.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这分别是
+\begin_inset Formula $n=10,20,30,40,50,60,70,80,90,100,200,300,400,500,600,700,800,900,1000,2000$
+\end_inset
+
+的情况
+\end_layout
+
+\begin_layout Standard
+作图为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/图片1.png
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+横坐标为n，纵坐标为时间（s）。
+\end_layout
+
+\begin_layout Subsubsection
+Dijkstra算法与project1单纯形法对比
+\end_layout
+
+\begin_layout Standard
+测试代码在comparisiontest.cpp内。原始测试数据为（时间单位为微秒）：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-27 162214.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2023-12-27 162223.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+作图得到（时间单位为微秒）
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/图片1.png
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+分析与总结
+\end_layout
+
+\begin_layout Standard
+Dijkstra算法比用lp求解快得多。甚至在20阶以内没有体现出正常相关关系，认为是在误差范围内。我认为Dijkstra算法比lp快的主要原因是将最短路问题化
+为标准lp时，系数矩阵是
+\begin_inset Formula $n*n^{2}$
+\end_inset
+
+的，大大增加了计算量。
+\end_layout
+
+\begin_layout Section
+Code
+\end_layout
+
+\begin_layout Standard
+代码见文件
+\end_layout
+
+\end_body
+\end_document

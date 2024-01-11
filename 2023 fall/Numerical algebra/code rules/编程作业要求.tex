@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage[UTF8]{ctex}
+\usepackage{float,indentfirst,verbatim,fancyhdr,graphicx,listings,longtable,amsmath, amsfonts,amssymb}
+
+\textheight 23.5cm \textwidth 15.8cm
+%\leftskip -1cm
+\topmargin -1.5cm \oddsidemargin 0.3cm \evensidemargin -0.3cm
+
+%\pagestyle{fancy} \lhead{FDM Homework Template} \chead{}
+%\rhead{\bfseries}
+%
+%\lfoot{} \cfoot{} \rfoot{\thepage}
+%\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+%
+\title{编程作业要求}
+\author{游瀚哲}
+
+\begin{document}
+\maketitle
+
+\section*{一、实验程序}
+
+编程语言使用 c++。但实际上，本课程的算法只涉及矩阵的运算，只需使用vector类即可满足需求。
+在不调用vector类其他函数的情况下，vector类和C语言中的数组有很多相似之处。
+
+$vector	\left \langle double \right \rangle b(N); $定义一个长为N的零向量
+
+$vector \left \langle vector\left \langle double \right \rangle \right \rangle  A(M, vector\left \langle double \right \rangle(N))$; 
+定义一个M*N的零矩阵
+
+b[0]; 访问b第一个元素
+ 
+A[0][0] ;访问A第一行第一列的元素
+
+$void \; forward\_ subs(vector \left \langle vector\left \langle double \right \rangle \right \rangle \& L, vector	\left \langle double \right \rangle \& b)$ 
+矩阵和向量在函数中的形参格式
+
+现在你已经学会这门课所需的c++知识了，快试试用c++写程序作业吧（雾），
+当然，使用其他数据结构用于表示矩阵也是可以的。项目创建可以参考提供的代码框架。
+
+IDE尽量使用visual studio。相比于dev-c++，其默认的调试界面更有利于发现错误，
+养成良好的编程习惯（eg：合适的缩进，合理的变量名，合适的项目结构与排版,适当的注释函数使用方式）对debug很有好处。
+
+visual studio可以直接在官网下载，社区版已经足够满足本课程的要求，且无需进行环境变量的配置。 
+
+
+
+\section*{二、实验报告}
+
+这门课应该算是数院同学接触的第一门要写实验报告的数学课，
+学会写一手漂亮的报告对以后的学习研究有重要的意义，
+故在此给出一些要求和帮助。
+
+在群文件中提供了word和latex的两种模版，
+latex相关软件可以在学校官网正版软件上下载,
+模版可应对报告大部分需求，细节问题直接搜索即可。
+但不管采用何种模版，一定要将提交报告转化为pdf格式。
+
+实验报告应该至少 包括以下几个部分：
+
+问题描述：简单介绍你要解决的问题。
+
+程序介绍：提出你所使用的算法，如果有与算法相关的参数请指出，并简要介绍程序的使用方式。
+
+实验结果：展示实验所产生的结果，例如程序运行产生的结果截图，（注：不建议将向量打印成列向量）。
+如果愿意的话，可以将程序运行所得的数据列表展示。
+
+结果分析：分析得到的实验结果，例如对比多个算法的精度和耗时，或分析实验结果的数值性态等。
+还可以从理论和算法的角度分析出现这些现象的原因是什么。
+
+在批改实验时，对于报告格式不会太过严苛，\textbf{但清晰的展示实验结果是必须的}。
+尽管如此，还是鼓励提交更详细更规范的实验报告。
+
+\section*{三、提交要求}
+
+上交作业时，需要删除项目文件中的.vs文件（以防止内存过大无法发送），再将整个项目和sln文件放入压缩包，
+保证\textbf{程序是完整且可运行的}，将报告pdf也放入压缩包，并将压缩包命名为学号+姓名。
+将压缩包发送到邮箱 ustcszds2020@163.com，将主题也命名为学号+姓名。
+如果一切顺利，会在提交作业后两周之内收到打分和反馈。
+
+\textbf{可以参考讨论但是严禁 copy 前几届或是同学的代码，应老师要求，一经发现本次作业 0 分处理。}
+
+\end{document}

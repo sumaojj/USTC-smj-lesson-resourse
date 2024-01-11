@@ -1,0 +1,14 @@
+[
+{
+  "directory": "D:/STudy/the first semester of junior/Numerical algebra/my homework6/build",
+  "command": "C:\\PROGRA~1\\mingw\\mingw64\\bin\\G__~1.EXE   -g -o CMakeFiles\\myhomework6.dir\\exercise.cpp.obj -c \"D:\\STudy\\the first semester of junior\\Numerical algebra\\my homework6\\exercise.cpp\"",
+  "file": "D:/STudy/the first semester of junior/Numerical algebra/my homework6/exercise.cpp",
+  "output": "CMakeFiles/myhomework6.dir/exercise.cpp.obj"
+},
+{
+  "directory": "D:/STudy/the first semester of junior/Numerical algebra/my homework6/build",
+  "command": "C:\\PROGRA~1\\mingw\\mingw64\\bin\\G__~1.EXE   -g -o CMakeFiles\\myhomework6.dir\\homework.cpp.obj -c \"D:\\STudy\\the first semester of junior\\Numerical algebra\\my homework6\\homework.cpp\"",
+  "file": "D:/STudy/the first semester of junior/Numerical algebra/my homework6/homework.cpp",
+  "output": "CMakeFiles/myhomework6.dir/homework.cpp.obj"
+}
+]
