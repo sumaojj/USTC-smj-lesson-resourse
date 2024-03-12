@@ -1,0 +1,249 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\begin_preamble
+\DeclareRobustCommand\nobreakspace{\leavevmode\nobreak\ }
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-named
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package none
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a3paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+计算机图形学HW2报告
+\end_layout
+
+\begin_layout Author
+苏茂江 PB21000340
+\end_layout
+
+\begin_layout Date
+2023.12.18
+\end_layout
+
+\begin_layout Section
+问题介绍
+\end_layout
+
+\begin_layout Standard
+实现（至少）两种 warping 算法 Inverse distance-weighted interpolation method (IDW)
+ Radial basis functions interpolation method (RBF) 。
+\end_layout
+
+\begin_layout Standard
+巩固面向对象编程（OOP）思想 巩固抽象： 数学变换的抽象 数学变换与图像无关（类的解耦） 封装、继承、多态。
+\end_layout
+
+\begin_layout Standard
+注意代码性能、规范性等 。
+\end_layout
+
+\begin_layout Standard
+提供规范、详细的实验报告。
+\end_layout
+
+\begin_layout Section
+算法原理
+\end_layout
+
+\begin_layout Standard
+使用ImGui 程序框架，用IDW和RBF 两种算法实现图像变形的程序。关于方程组的求解调用了Eigen库。
+\end_layout
+
+\begin_layout Subsection
+IDW
+\end_layout
+
+\begin_layout Standard
+利用基函数的组合，得到插值函数，并以此给出点到点的映射。
+\end_layout
+
+\begin_layout Subsection
+RBF
+\end_layout
+
+\begin_layout Standard
+利用径向基函数，用补充约束求出插值函数，并以此给出点到点的映射。
+\end_layout
+
+\begin_layout Subsection
+NN
+\end_layout
+
+\begin_layout Standard
+思路是对选的每一对点作为sample，放到MLP中进行训练，但最后没能实现，因为配置libtorch环境失败。
+\end_layout
+
+\begin_layout Section
+类图
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2024-03-11 101050.png
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+测试结果
+\end_layout
+
+\begin_layout Subsection
+IDW
+\end_layout
+
+\begin_layout Standard
+选点：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2024-03-11 095244.png
+	lyxscale 80
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Warping：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2024-03-11 095254.png
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+多边形
+\end_layout
+
+\begin_layout Standard
+选点：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2024-03-11 095316.png
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Warping：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2024-03-11 095600.png
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,222 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\begin_preamble
+\DeclareRobustCommand\nobreakspace{\leavevmode\nobreak\ }
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-named
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package none
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a3paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+计算机图形学HW1报告
+\end_layout
+
+\begin_layout Author
+苏茂江 PB21000340
+\end_layout
+
+\begin_layout Date
+2023.12.18
+\end_layout
+
+\begin_layout Section
+问题介绍
+\end_layout
+
+\begin_layout Standard
+写一个交互式画图小程序 MiniDraw，要求画直线 (Line)，椭圆 (Ellipse)，矩形 (Rectangle)，多边形 (Polygon)
+ 等图形元素（图元） 
+\end_layout
+
+\begin_layout Standard
+每种图元需用一个类（对象）来封装，如 Line，Ellipse，Rect，Polygon，Freehand（自由绘制模式，optional） 
+\end_layout
+
+\begin_layout Standard
+各种图元从一个父类来继承，如 Shape。
+\end_layout
+
+\begin_layout Standard
+使用类的多态调用绘图函数 画图工具的拓展功能（线条粗细颜色、形状填充、对象选取、对象变换、顶点编辑等，optional）
+\end_layout
+
+\begin_layout Standard
+注意代码性能、规范性等 
+\end_layout
+
+\begin_layout Standard
+提供规范、详细的实验报告
+\end_layout
+
+\begin_layout Section
+算法原理
+\end_layout
+
+\begin_layout Standard
+使用ImGui 程序框架添加椭圆和多边形画图程序。
+\end_layout
+
+\begin_layout Subsection
+椭圆
+\end_layout
+
+\begin_layout Standard
+先在主窗口中添加一个 Ellipse 按钮交互。再在 include/view/shapes/ 文件夹下新建一个 ellipse.h 文件，在 src/view/
+shapes/ 文件夹下新建一个 ellipse.cpp 文件。他们将用来实现椭圆类 Ellipse。最后为椭圆定义数据结构，我采用的是起点和终点分别是椭圆外切矩
+形的对角点，再在在 comp_canvas.cpp 中实现鼠标绘制椭圆。
+\end_layout
+
+\begin_layout Subsection
+多边形
+\end_layout
+
+\begin_layout Standard
+在主窗口中添加一个 Polygon 按钮交互，再采用自定义点类的vector作为多边形的数据结构，想法是在第一次点击时创建一个多边形，之后每次点击，都不结束绘画
+而是添加新的点到多边形内，并画出。最后实现点击右键结束绘画。
+\end_layout
+
+\begin_layout Subsection
+自由绘画
+\end_layout
+
+\begin_layout Standard
+本来是仿照多边形，在每次鼠标移动的时候添加点并绘画，但最后没能实现，测试时遇到了bug无法解决。
+\end_layout
+
+\begin_layout Section
+类图
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2024-03-03 203743.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+测试结果
+\end_layout
+
+\begin_layout Subsection
+椭圆
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2024-03-03 204310.png
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+多边形
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/26557/Pictures/Screenshots/屏幕截图 2024-03-03 204337.png
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
