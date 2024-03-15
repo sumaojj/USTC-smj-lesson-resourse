@@ -5,47 +5,43 @@ for i = 1:length(N_vector)
     % create the intermediary vector with size N and vector x2=
     x1 = ones(N + 1, 1);
     x2 = ones(N + 1, 1);
+    y1 = ones(N + 1, 1);
+    y2 = ones(N + 1, 1);
 
     for j = 1:N + 1
-        x1(j) = 1 + 2 * (j - 1) / N;
-        x2(j) = -cos(pi * (2 * i - 1) / 2 * (N + 1));
+        x1(j) = 1 - 2 * (j - 1) / N;
+        x2(j) = -cos(pi * (2 * j - 1) / (2 * (N + 1)));
+        y1(j) = myfunc(x1(j));
+        y2(j) = myfunc(x2(j));
     end
 
-    y1 = myfunc(x1);
-    y2 = myfunc(x2);
     %calculate the intermediary with myfunc
-    for j = 1:N + 1
+    for j = 1:N
 
-        for k = N + 1:j
+        for k = N + 1:j + 1
             y1(k) = (y1(k) - y1(k - 1)) / (x1(k) - x1(k - j));
             y2(k) = (y2(k) - y2(k - 1)) / (x2(k) - x2(k - j));
         end
 
     end
 
-    %calculate  the polynomial
-
-    fx1 = y(N + 1);
-    fx2 = y(N + 1);
-
-    for j = N + 1:1
-        fx1 = y(j - 1) + (x - x1(j - 1)) * fx;
-        fx2 = y(j - 1) + (x - x2(j - 1)) * fx;
-    end
+    % %reverse the vector
+    % y1 = flipud(y1);
+    % y2 = flipud(y2);
 
     %calculate the error
     z = ones (101, 1);
 
     for j = 1:101
-        z(j) = j / 50 - 1;
+        z(j) = (j - 1) / 50 - 1;
     end
 
     error1 = ones(101, 1);
     error2 = ones(101, 1);
 
     for j = 1:101
-        error1(j) = abs(fx1 - myfunc(z(j)));
-        error2(j) = abs(fx2 - myfunc(z(j)));
+        error1(j) = abs(myfunc(z(j)) - polyval(y1, z(j)));
+        error2(j) = abs(myfunc(z(j)) - polyval(y2, z(j)));
     end
 
     %for every N, ouput max error
